@@ -1050,22 +1050,29 @@ function renderQuizView() {
     const container = document.getElementById("quizContainer");
     container.innerHTML = "";
 
+    const labels = ["A", "B", "C", "D"];
+
     QUIZ_QUESTIONS.forEach((q, qIndex) => {
         const qCard = document.createElement("div");
-        qCard.className = "bento-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 animate-fade-in";
+        qCard.className = "bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-4 shadow-2xs transition-all";
         qCard.id = `quizCard-${q.id}`;
 
         let optionsHtml = q.options.map((opt, optIdx) => `
-            <label class="flex items-center gap-3 p-3 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 cursor-pointer transition-all active:scale-[0.99]">
-                <input type="radio" name="quizOpt_${q.id}" value="${optIdx}" onchange="selectQuizOption(${q.id}, ${optIdx})" class="w-4 h-4 text-emerald-600 accent-emerald-600 shrink-0">
-                <span class="text-xs text-slate-800 font-medium leading-normal">${opt}</span>
+            <label class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-slate-300 hover:bg-slate-100/60 cursor-pointer transition-all active:scale-[0.99] group">
+                <input type="radio" name="quizOpt_${q.id}" value="${optIdx}" onchange="selectQuizOption(${q.id}, ${optIdx})" class="mt-0.5 w-4 h-4 text-emerald-600 accent-emerald-600 shrink-0">
+                <span class="text-xs font-bold text-slate-500 group-hover:text-slate-900 shrink-0">[${labels[optIdx]}]</span>
+                <span class="text-xs sm:text-sm text-slate-800 font-medium leading-relaxed">${opt}</span>
             </label>
         `).join("");
 
         qCard.innerHTML = `
-            <h4 class="text-xs sm:text-sm font-bold text-slate-900 leading-relaxed">${q.question}</h4>
-            <div class="grid grid-cols-1 gap-2">${optionsHtml}</div>
-            <div id="quizExplain_${q.id}" class="hidden mt-3 p-3 rounded-2xl text-xs space-y-1"></div>
+            <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                <span class="text-xs font-bold text-slate-400">ข้อที่ ${qIndex + 1} / ${QUIZ_QUESTIONS.length}</span>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200">A-Level Bio</span>
+            </div>
+            <h4 class="text-xs sm:text-base font-extrabold text-slate-900 leading-relaxed">${q.question}</h4>
+            <div class="grid grid-cols-1 gap-2.5 pt-1">${optionsHtml}</div>
+            <div id="quizExplain_${q.id}" class="hidden mt-3 p-3.5 rounded-xl text-xs space-y-1"></div>
         `;
 
         container.appendChild(qCard);
