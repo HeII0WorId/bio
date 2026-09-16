@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>STUDY PASS ⚡ สรุปบทเรียน ม.ปลาย & A-Level | อ่านน้อยลง จำได้มากขึ้น</title>
+    <title>STUDY PASS ⚡ | สรุปบทเรียน ม.ปลาย & A-Level</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Prompt & Kanit & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Custom CSS -->
@@ -27,392 +27,253 @@
         }
     </script>
 </head>
-<body class="bg-[#fafafc] text-slate-900 min-h-screen font-sans selection:bg-indigo-500 selection:text-white overflow-x-hidden flex flex-col justify-between antialiased">
+<body class="bg-[#fcfcfd] text-slate-900 min-h-screen font-sans selection:bg-slate-900 selection:text-white overflow-x-hidden flex flex-col justify-between antialiased">
 
-    <!-- Sticky Glass Top Navigation Bar -->
-    <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b border-slate-200/80 shadow-xs transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-slate-200/80 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="h-16 flex items-center justify-between gap-4">
                 
                 <!-- Logo / Brand -->
-                <a href="index.html" class="flex items-center gap-2.5 cursor-pointer group">
-                    <div class="w-9 h-9 rounded-xl bg-slate-900 flex items-center justify-center text-amber-400 font-bold text-lg shadow-sm group-hover:scale-105 transition-transform">
-                        ⚡
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="font-extrabold text-xl tracking-tight text-slate-900">STUDY PASS</span>
-                        <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-bold bg-slate-100 text-slate-600 border border-slate-200 rounded-md uppercase tracking-wider">A-Level & ม.6</span>
-                    </div>
+                <a href="index.html" class="flex items-center gap-2 cursor-pointer group">
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900 group-hover:opacity-80 transition-opacity">STUDY PASS ⚡</span>
                 </a>
 
-                <!-- Desktop Nav Links & CTA -->
-                <div class="flex items-center gap-1 sm:gap-2">
-                    <nav class="hidden md:flex items-center gap-1 mr-2">
-                        <a href="biology.html" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all">ชีววิทยา</a>
-                        <a href="math.html" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all">คณิตศาสตร์</a>
-                        <a href="social.html" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all">สังคมศึกษา</a>
-                    </nav>
-
-                    <a href="biology.html" class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-900 text-white hover:bg-indigo-600 transition-all shadow-sm flex items-center gap-1.5 active:scale-95">
-                        <span>เริ่มเรียน</span>
-                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                    </a>
-                </div>
+                <!-- Desktop Nav Links -->
+                <nav class="flex items-center gap-1 sm:gap-2">
+                    <a href="biology.html" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all">ชีววิทยา</a>
+                    <a href="math.html" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all">คณิตศาสตร์</a>
+                    <a href="social.html" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all">สังคมศึกษา</a>
+                </nav>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Portal -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 flex-1 space-y-16 sm:space-y-24">
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 flex-1 space-y-16 sm:space-y-20">
 
         <!-- Hero Section -->
-        <section class="text-center relative py-4 sm:py-10 space-y-6 sm:space-y-8">
-            <!-- Subtle Radial Gradient Background Glow -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[320px] bg-gradient-to-tr from-indigo-200/40 via-purple-100/30 to-emerald-100/40 blur-[100px] pointer-events-none rounded-full"></div>
-            
-            <div class="relative z-10 max-w-3xl mx-auto space-y-4 sm:space-y-6">
-                <!-- Badge -->
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-white text-indigo-700 border border-indigo-100 shadow-xs">
-                    <span class="flex h-2 w-2 relative">
-                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                      <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
-                    </span>
-                    <span>STUDY PASS ⚡ คลังสรุปเตรียมสอบ ม.ปลาย & A-Level</span>
-                </div>
-
-                <!-- Main Headline -->
-                <h1 class="text-3xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-                    อ่านน้อยลง <br class="hidden sm:block" />
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-emerald-600">แต่จำได้มากขึ้น ⚡</span>
+        <section class="text-center py-6 sm:py-10 space-y-6 max-w-2xl mx-auto">
+            <div class="space-y-4">
+                <span class="text-xs sm:text-sm font-extrabold tracking-wider text-indigo-600 uppercase">STUDY PASS ⚡</span>
+                
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.2]">
+                    อ่านให้เข้าใจ <br />
+                    ทบทวนให้จำ <br />
+                    <span class="text-slate-900">พร้อมสอบ</span>
                 </h1>
 
-                <!-- Subtitle Description -->
-                <p class="text-slate-600 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed font-normal">
-                    สรุปบทเรียน ม.ปลาย & A-Level แบบสั้น กระชับ เน้นจุดที่ออกสอบบ่อย พร้อม Active Recall Flashcards และข้อสอบเก็งเฉลยเป็นขั้นตอน
+                <p class="text-slate-600 text-sm sm:text-base font-normal leading-relaxed pt-1">
+                    สรุปบทเรียน ม.ปลาย & A-Level <br class="hidden sm:inline" />
+                    แบบสั้น กระชับ และเน้นสิ่งที่ต้องรู้
                 </p>
+            </div>
 
-                <!-- Primary & Secondary CTA Buttons -->
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-                    <a href="biology.html" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-extrabold text-sm sm:text-base text-center shadow-lg shadow-indigo-600/25 flex items-center justify-center gap-2.5 transition-all hover:-translate-y-0.5 active:translate-y-0">
-                        <span>🧬 เริ่มเรียนชีวะ</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
-                    <a href="#subjects" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white hover:bg-slate-100 text-slate-700 border border-slate-200/90 font-bold text-sm sm:text-base text-center shadow-xs flex items-center justify-center gap-2 transition-all hover:border-slate-300">
-                        <span>ดูทุกวิชา ↓</span>
-                    </a>
-                </div>
-
-                <!-- Metric Pills -->
-                <div class="pt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-slate-500">
-                    <div class="flex items-center gap-1.5 px-3 py-1 bg-white/80 rounded-full border border-slate-200/60 shadow-2xs">
-                        <i data-lucide="book-open" class="w-3.5 h-3.5 text-indigo-500"></i>
-                        <span>3 วิชาหลัก</span>
-                    </div>
-                    <div class="flex items-center gap-1.5 px-3 py-1 bg-white/80 rounded-full border border-slate-200/60 shadow-2xs">
-                        <i data-lucide="layers" class="w-3.5 h-3.5 text-emerald-500"></i>
-                        <span>7 บทเรียนเข้มข้น</span>
-                    </div>
-                    <div class="flex items-center gap-1.5 px-3 py-1 bg-white/80 rounded-full border border-slate-200/60 shadow-2xs">
-                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-500"></i>
-                        <span>23 Active Recall Cards</span>
-                    </div>
-                </div>
+            <div class="pt-2">
+                <a href="#subjects" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition-all hover:gap-3 shadow-sm active:scale-98">
+                    <span>เริ่มเรียน</span>
+                    <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </a>
             </div>
         </section>
 
-        <!-- Subject Cards Section -->
-        <section id="subjects" class="space-y-8 scroll-mt-20">
-            <!-- Section Header -->
-            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-200/80 pb-4">
-                <div>
-                    <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Course Catalog</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-0.5">
-                        เลือกวิชาที่อยากทบทวน
-                    </h2>
-                </div>
-                <p class="text-xs sm:text-sm text-slate-500">คลิกที่วิชาเพื่อเข้าสู่คอร์สเรียนและสรุปเนื้อหาทันที</p>
+        <!-- Available Subjects Grid -->
+        <section id="subjects" class="space-y-6 scroll-mt-24">
+            <div class="border-b border-slate-200 pb-3 flex items-center justify-between">
+                <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                    วิชาพร้อมเรียน (Available Courses)
+                </h2>
+                <span class="text-xs font-semibold text-slate-500">3 รายวิชา</span>
             </div>
 
-            <!-- Subject Cards Grid (3 Columns) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 <!-- Subject 1: Biology -->
-                <div class="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-7 space-y-6 flex flex-col justify-between hover:border-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300 hover:-translate-y-1 group relative">
-                    <div class="space-y-5">
-                        <!-- Top Icon & Badge -->
-                        <div class="flex items-start justify-between">
-                            <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-3xl shadow-xs group-hover:scale-110 transition-transform">
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-6 flex flex-col justify-between hover:border-slate-300 hover:shadow-md transition-all duration-200 group">
+                    <div class="space-y-4">
+                        <!-- Header & Badge -->
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold tracking-wider text-slate-400 uppercase">BIOLOGY A-LEVEL</span>
+                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600 border border-slate-200/80">
+                                ม.6 / A-Level
+                            </span>
+                        </div>
+
+                        <!-- Icon & Name -->
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center justify-center text-xl shrink-0">
                                 🧬
                             </div>
-                            <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-emerald-100/70 text-emerald-800 border border-emerald-200/60">
-                                ม.6 / A-Level
-                            </span>
+                            <div>
+                                <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    ชีววิทยา
+                                </h3>
+                                <p class="text-xs font-semibold text-slate-600">5 บทสำคัญสำหรับ A-Level</p>
+                            </div>
                         </div>
 
-                        <!-- Title & Description -->
-                        <div class="space-y-2">
-                            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 group-hover:text-emerald-600 transition-colors">
-                                ชีววิทยา (Biology)
-                            </h3>
-                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                                สรุป 5 บทสำคัญ: ระบบประสาท, ต่อมไร้ท่อ, การเคลื่อนที่ (12 ข้อ ⭐), พืช และพฤติกรรมสัตว์
-                            </p>
-                        </div>
+                        <!-- Topics Dot Line -->
+                        <p class="text-xs text-slate-500 leading-relaxed pt-1">
+                            ระบบประสาท · ต่อมไร้ท่อ · การเคลื่อนที่ · พืช · พฤติกรรมสัตว์
+                        </p>
 
-                        <!-- Compact Metadata Pills Line -->
-                        <div class="flex flex-wrap gap-1.5 pt-1">
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/60">
-                                📝 40 ข้อ A-Level
-                            </span>
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/60">
-                                🃏 15 Flashcards
-                            </span>
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/60">
-                                ⏱️ 5 Quizzes
-                            </span>
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/60">
-                                🖼️ Diagram Inline
-                            </span>
+                        <!-- Stats Pills -->
+                        <div class="pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">5 บทเรียน</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">15 Recall</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">5 Quiz</span>
                         </div>
                     </div>
 
-                    <!-- CTA Button -->
-                    <a href="biology.html" class="w-full py-3 px-5 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-extrabold text-xs sm:text-sm text-center shadow-sm flex items-center justify-center gap-2 transition-all group-hover:shadow-emerald-600/20">
-                        <span>เข้าสู่บทเรียนชีววิทยา</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
+                    <!-- CTA Link -->
+                    <div class="pt-6">
+                        <a href="biology.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                            <span>เริ่มเรียน</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Subject 2: Math -->
-                <div class="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-7 space-y-6 flex flex-col justify-between hover:border-amber-500/50 hover:shadow-xl hover:shadow-amber-500/5 transition-all duration-300 hover:-translate-y-1 group relative">
-                    <div class="space-y-5">
-                        <!-- Top Icon & Badge -->
-                        <div class="flex items-start justify-between">
-                            <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-100 flex items-center justify-center text-3xl shadow-xs group-hover:scale-110 transition-transform">
-                                📐
-                            </div>
-                            <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-100/70 text-amber-800 border border-amber-200/60">
+                <!-- Subject 2: Mathematics -->
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-6 flex flex-col justify-between hover:border-slate-300 hover:shadow-md transition-all duration-200 group">
+                    <div class="space-y-4">
+                        <!-- Header & Badge -->
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold tracking-wider text-slate-400 uppercase">MATHEMATICS A-LEVEL</span>
+                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600 border border-slate-200/80">
                                 ม.6 / A-Level
                             </span>
                         </div>
 
-                        <!-- Title & Description -->
-                        <div class="space-y-2">
-                            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 group-hover:text-amber-600 transition-colors">
-                                คณิตศาสตร์ (Math)
-                            </h3>
-                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                                Cheat Sheet สรุปสูตรความน่าจะเป็น & การจัดหมู่, กฎเซต, De Morgan พร้อมชุดโจทย์ยาก 8 ข้อ
-                            </p>
+                        <!-- Icon & Name -->
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center justify-center text-xl shrink-0">
+                                📐
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    คณิตศาสตร์
+                                </h3>
+                                <p class="text-xs font-semibold text-slate-600">Cheat Sheet สูตร & โจทย์แข่งขัน</p>
+                            </div>
                         </div>
 
-                        <!-- Compact Metadata Pills Line -->
-                        <div class="flex flex-wrap gap-1.5 pt-1">
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/60">
-                                📐 สูตรสรุปกระชับ
-                            </span>
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/60">
-                                🎯 8 โจทย์แข่งขัน
-                            </span>
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-amber-50 text-amber-700 border border-amber-200/60">
-                                ⚡ KaTeX Rendered
-                            </span>
+                        <!-- Topics Dot Line -->
+                        <p class="text-xs text-slate-500 leading-relaxed pt-1">
+                            ความน่าจะเป็น · การจัดหมู่ · กฎเซต · De Morgan · โจทย์แข่งขัน 8 ข้อ
+                        </p>
+
+                        <!-- Stats Pills -->
+                        <div class="pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">สูตรสรุป</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">8 โจทย์ยาก</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">KaTeX</span>
                         </div>
                     </div>
 
-                    <!-- CTA Button -->
-                    <a href="math.html" class="w-full py-3 px-5 rounded-xl bg-slate-900 hover:bg-amber-600 text-white font-extrabold text-xs sm:text-sm text-center shadow-sm flex items-center justify-center gap-2 transition-all group-hover:shadow-amber-600/20">
-                        <span>เข้าสู่บทเรียนคณิตศาสตร์</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
+                    <!-- CTA Link -->
+                    <div class="pt-6">
+                        <a href="math.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                            <span>เริ่มเรียน</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Subject 3: Social Studies -->
-                <div class="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-7 space-y-6 flex flex-col justify-between hover:border-indigo-500/50 hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300 hover:-translate-y-1 group relative">
-                    <div class="space-y-5">
-                        <!-- Top Icon & Badge -->
-                        <div class="flex items-start justify-between">
-                            <div class="w-14 h-14 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-3xl shadow-xs group-hover:scale-110 transition-transform">
-                                🏛️
-                            </div>
-                            <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-indigo-100/70 text-indigo-800 border border-indigo-200/60">
+                <div class="bg-white rounded-2xl border border-slate-200/90 p-6 flex flex-col justify-between hover:border-slate-300 hover:shadow-md transition-all duration-200 group">
+                    <div class="space-y-4">
+                        <!-- Header & Badge -->
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-bold tracking-wider text-slate-400 uppercase">SOCIAL STUDIES</span>
+                            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600 border border-slate-200/80">
                                 ม.6 ปลายภาค
                             </span>
                         </div>
 
-                        <!-- Title & Description -->
-                        <div class="space-y-2">
-                            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors">
-                                สังคมศึกษา (Social)
-                            </h3>
-                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-                                สรุปบทที่ 4 (ความขัดแย้ง & ความร่วมมือสากล, UN) และบทที่ 5 (อารยธรรมจีน อินเดีย อิสลาม)
-                            </p>
+                        <!-- Icon & Name -->
+                        <div class="flex items-center gap-3">
+                            <div class="w-11 h-11 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center justify-center text-xl shrink-0">
+                                🏛️
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                                    สังคมศึกษา
+                                </h3>
+                                <p class="text-xs font-semibold text-slate-600">2 บทใหญ่สำหรับปลายภาค</p>
+                            </div>
                         </div>
 
-                        <!-- Compact Metadata Pills Line -->
-                        <div class="flex flex-wrap gap-1.5 pt-1">
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/60">
-                                📚 2 บทเรียนใหญ่
-                            </span>
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200/60">
-                                🃏 8 Flashcards
-                            </span>
-                            <span class="px-2.5 py-1 rounded-md text-[11px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200/60">
-                                🌐 UN & อารยธรรม
-                            </span>
+                        <!-- Topics Dot Line -->
+                        <p class="text-xs text-slate-500 leading-relaxed pt-1">
+                            ความขัดแย้งสากล · UN · สงครามโลก · อารยธรรมจีน · อารยธรรมอินเดีย
+                        </p>
+
+                        <!-- Stats Pills -->
+                        <div class="pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-slate-500">
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">2 บทเรียน</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">8 Recall</span>
+                            <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-700">UN & อารยธรรม</span>
                         </div>
                     </div>
 
-                    <!-- CTA Button -->
-                    <a href="social.html" class="w-full py-3 px-5 rounded-xl bg-slate-900 hover:bg-indigo-600 text-white font-extrabold text-xs sm:text-sm text-center shadow-sm flex items-center justify-center gap-2 transition-all group-hover:shadow-indigo-600/20">
-                        <span>เข้าสู่บทเรียนสังคมศึกษา</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
+                    <!-- CTA Link -->
+                    <div class="pt-6">
+                        <a href="social.html" class="inline-flex items-center gap-2 text-sm font-bold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                            <span>เริ่มเรียน</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- "ทำไม STUDY PASS?" (Why Study Pass?) Feature Grid Section -->
-        <section class="space-y-8 bg-white rounded-3xl border border-slate-200/80 p-6 sm:p-10 shadow-xs">
-            <!-- Section Header -->
-            <div class="text-center max-w-xl mx-auto space-y-2">
-                <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Key Benefits</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                    ทำไมต้องเรียนกับ STUDY PASS?
-                </h2>
-                <p class="text-xs sm:text-sm text-slate-500">ออกแบบทุกฟีเจอร์เพื่อให้นักเรียน ม.ปลาย เตรียมสอบได้เร็วและตรงจุดที่สุด</p>
-            </div>
-
-            <!-- Feature Cards (2x2 Grid) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-                <!-- Feature 1 -->
-                <div class="flex gap-4 p-5 rounded-2xl bg-[#fafafd] border border-slate-200/70 hover:border-slate-300 transition-all">
-                    <div class="w-11 h-11 rounded-xl bg-indigo-100 border border-indigo-200 flex items-center justify-center text-indigo-600 shrink-0">
-                        <i data-lucide="zap" class="w-5 h-5"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <h4 class="font-bold text-slate-900 text-base">สรุปกระชับ ตรงจุดออกสอบ</h4>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            คัดเฉพาะประเด็นสำคัญที่ออกสอบบ่อยในข้อสอบ A-Level และข้อสอบโรงเรียน ไม่ต้องเสียเวลาอ่านเนื้อหาส่วนเกิน
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="flex gap-4 p-5 rounded-2xl bg-[#fafafd] border border-slate-200/70 hover:border-slate-300 transition-all">
-                    <div class="w-11 h-11 rounded-xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-600 shrink-0">
-                        <i data-lucide="rotate-cw" class="w-5 h-5"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <h4 class="font-bold text-slate-900 text-base">Active Recall Flashcards</h4>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            ทบทวนความจำด้วยระบบการ์ดคำถาม-คำตอบ สามารถคลิกพลิกดูเฉลยเพื่อทดสอบความแม่นยำก่อนสอบจริง
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="flex gap-4 p-5 rounded-2xl bg-[#fafafd] border border-slate-200/70 hover:border-slate-300 transition-all">
-                    <div class="w-11 h-11 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center text-amber-600 shrink-0">
-                        <i data-lucide="file-check-2" class="w-5 h-5"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <h4 class="font-bold text-slate-900 text-base">คลังโจทย์ & เฉลยละเอียด</h4>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            รวบรวมแนวข้อสอบจริงและข้อสอบแข่งขัน พร้อมเฉลยวิธีคิดอย่างเป็นขั้นตอนเพื่อสร้างความเข้าใจ
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="flex gap-4 p-5 rounded-2xl bg-[#fafafd] border border-slate-200/70 hover:border-slate-300 transition-all">
-                    <div class="w-11 h-11 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-600 shrink-0">
-                        <i data-lucide="smartphone" class="w-5 h-5"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <h4 class="font-bold text-slate-900 text-base">อ่านง่ายทุกอุปกรณ์ (Mobile-First)</h4>
-                        <p class="text-slate-600 text-xs leading-relaxed">
-                            ดีไซน์ Responsive สะอาดตา ใช้งานได้ลื่นไหลทั้งบนสมาร์ตโฟน แท็บเล็ต และคอมพิวเตอร์
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Coming Soon Section with Progress Indicator -->
+        <!-- Coming Soon Subjects Section -->
         <section class="space-y-6">
-            <!-- Header & Progress Bar Card -->
-            <div class="bg-gradient-to-r from-slate-900 to-indigo-950 text-white rounded-3xl p-6 sm:p-8 space-y-6 shadow-md">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <div class="space-y-1">
-                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 uppercase tracking-wider">
-                            Content Roadmap
+            <div class="border-b border-slate-200 pb-3 flex items-center justify-between">
+                <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                    เตรียมเปิดให้บริการเร็ว ๆ นี้ (Coming Soon)
+                </h2>
+                <span class="text-xs font-semibold text-slate-400">2 รายวิชา</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                <!-- Chemistry Coming Soon Card -->
+                <div class="bg-slate-50/70 rounded-2xl border border-dashed border-slate-200 p-5 space-y-3 opacity-60">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <span class="text-lg">🧪</span>
+                            <span class="text-xs font-bold tracking-wider text-slate-400 uppercase">CHEMISTRY</span>
+                        </div>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-200 text-slate-600 tracking-wider">
+                            COMING SOON
                         </span>
-                        <h3 class="text-xl sm:text-2xl font-extrabold tracking-tight">
-                            เพิ่มเนื้อหาเร็ว ๆ นี้ ⚡
-                        </h3>
-                        <p class="text-slate-400 text-xs sm:text-sm">ทีมงานกำลังทยอยเพิ่มเนื้อหาสรุปวิชาอื่น ๆ ให้ครบถ้วน</p>
                     </div>
-
-                    <!-- Progress Bar Component -->
-                    <div class="sm:w-64 space-y-2 bg-white/5 p-4 rounded-2xl border border-white/10">
-                        <div class="flex items-center justify-between text-xs font-bold">
-                            <span class="text-slate-300">ความคืบหน้ารวม</span>
-                            <span class="text-emerald-400">60% Complete</span>
-                        </div>
-                        <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden p-0.5 border border-white/5">
-                            <div class="h-full bg-gradient-to-r from-emerald-400 via-indigo-400 to-amber-400 rounded-full w-[60%] transition-all duration-1000"></div>
-                        </div>
-                        <p class="text-[10px] text-slate-400 text-right">3 จาก 5 วิชาพร้อมเรียน</p>
+                    <div>
+                        <h4 class="font-extrabold text-slate-800 text-base">เคมี</h4>
+                        <p class="text-xs text-slate-500 mt-1">อะตอม · พันธะ · กรด-เบส · เคมีไฟฟ้า</p>
                     </div>
                 </div>
 
-                <!-- Upcoming Subject Cards Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
-                    <!-- Upcoming 1: Chemistry -->
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-4 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-2.5">
-                                <span class="text-2xl">🧪</span>
-                                <h4 class="font-bold text-sm text-white">เคมี (Chemistry)</h4>
-                            </div>
-                            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-                                70%
-                            </span>
+                <!-- Physics Coming Soon Card -->
+                <div class="bg-slate-50/70 rounded-2xl border border-dashed border-slate-200 p-5 space-y-3 opacity-60">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <span class="text-lg">⚡</span>
+                            <span class="text-xs font-bold tracking-wider text-slate-400 uppercase">PHYSICS</span>
                         </div>
-                        <p class="text-slate-400 text-xs">สรุปอะตอม, พันธะเคมี, กรด-เบส และเคมีไฟฟ้า</p>
+                        <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-slate-200 text-slate-600 tracking-wider">
+                            COMING SOON
+                        </span>
                     </div>
-
-                    <!-- Upcoming 2: Physics -->
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-4 space-y-3">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-2.5">
-                                <span class="text-2xl">⚡</span>
-                                <h4 class="font-bold text-sm text-white">ฟิสิกส์ (Physics)</h4>
-                            </div>
-                            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
-                                50%
-                            </span>
-                        </div>
-                        <p class="text-slate-400 text-xs">สรุปกลศาสตร์, คลื่น, ไฟฟ้า และฟิสิกส์ยุคใหม่</p>
-                    </div>
-
-                    <!-- Upcoming 3: English -->
-                    <div class="bg-white/5 border border-white/10 rounded-2xl p-4 space-y-3 sm:col-span-2 lg:col-span-1">
-                        <div class="flex items-center justify-between">
-                            <div class="flex items-center gap-2.5">
-                                <span class="text-2xl">🇬🇧</span>
-                                <h4 class="font-bold text-sm text-white">ภาษาอังกฤษ (TGAT1)</h4>
-                            </div>
-                            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-slate-500/20 text-slate-300 border border-slate-500/30">
-                                ในแผนจัดทำ
-                            </span>
-                        </div>
-                        <p class="text-slate-400 text-xs">คลังศัพท์เก็งสอบ, Grammar & Reading Passages</p>
+                    <div>
+                        <h4 class="font-extrabold text-slate-800 text-base">ฟิสิกส์</h4>
+                        <p class="text-xs text-slate-500 mt-1">กลศาสตร์ · คลื่น · ไฟฟ้า · ฟิสิกส์ยุคใหม่</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -420,12 +281,10 @@
 
     <!-- Footer -->
     <footer class="border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 space-y-2">
-            <div class="flex items-center justify-center gap-2">
-                <span class="font-extrabold text-slate-900 text-base">STUDY PASS ⚡</span>
-            </div>
-            <p class="text-slate-600 font-medium">คลังสรุปบทเรียนและเก็งข้อสอบ ม.ปลาย & A-Level</p>
-            <p class="text-slate-400 text-[11px]">Designed for Thai High School Students • Clean Minimal SaaS Aesthetic</p>
+        <div class="max-w-6xl mx-auto px-4 space-y-1.5">
+            <p class="font-extrabold text-slate-900 text-sm">STUDY PASS ⚡</p>
+            <p class="text-slate-600 font-medium">คลังสรุปบทเรียน ม.ปลาย & A-Level</p>
+            <p class="text-slate-400 text-[11px] pt-1">© 2026 Study Pass</p>
         </div>
     </footer>
 
