@@ -36,14 +36,14 @@
                 
                 <!-- Logo / Brand -->
                 <a href="index.html" class="flex items-center gap-3 cursor-pointer">
-                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-500 via-cyan-500 to-amber-500 p-[2px] shadow-sm">
+                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-500 via-indigo-500 to-amber-500 p-[2px] shadow-sm">
                         <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center text-slate-900 font-bold text-xl">
                             ⚡
                         </div>
                     </div>
                     <div>
                         <div class="flex items-center gap-1.5">
-                            <span class="font-extrabold text-lg sm:text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-600">STUDY PASS</span>
+                            <span class="font-extrabold text-lg sm:text-xl tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 via-indigo-600 to-amber-600">STUDY PASS</span>
                             <span class="px-2 py-0.5 text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 rounded-full uppercase tracking-wider">Gen Z Hub</span>
                         </div>
                         <p class="text-[11px] text-slate-500 hidden sm:block">คลังสรุปบทเรียนและเก็งข้อสอบ ม.ปลาย & A-Level ⚡</p>
@@ -51,12 +51,15 @@
                 </a>
 
                 <!-- Nav Buttons -->
-                <div class="flex items-center gap-2">
-                    <a href="biology.html" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 transition-all flex items-center gap-1.5">
+                <div class="flex items-center gap-2 overflow-x-auto no-scrollbar">
+                    <a href="biology.html" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 transition-all flex items-center gap-1.5 shrink-0">
                         <span>🧬 ชีววิทยา</span>
                     </a>
-                    <a href="math.html" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:bg-amber-50 hover:text-amber-700 transition-all flex items-center gap-1.5">
+                    <a href="math.html" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:bg-amber-50 hover:text-amber-700 transition-all flex items-center gap-1.5 shrink-0">
                         <span>📐 คณิตศาสตร์</span>
+                    </a>
+                    <a href="social.html" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:bg-indigo-50 hover:text-indigo-700 transition-all flex items-center gap-1.5 shrink-0">
+                        <span>🏛️ สังคมศึกษา</span>
                     </a>
                 </div>
             </div>
@@ -68,7 +71,7 @@
 
         <!-- Hero Welcome Section -->
         <section class="text-center space-y-4 relative py-6">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[280px] bg-gradient-to-tr from-emerald-100/50 via-cyan-100/50 to-amber-100/50 blur-[90px] pointer-events-none rounded-full"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[280px] bg-gradient-to-tr from-emerald-100/50 via-indigo-100/50 to-amber-100/50 blur-[90px] pointer-events-none rounded-full"></div>
             
             <div class="relative z-10 space-y-3">
                 <span class="px-3.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200 inline-flex items-center gap-1.5">
@@ -76,7 +79,7 @@
                     คลังเนื้อหาสรุปเตรียมสอบ A-Level & ม.ปลาย
                 </span>
                 <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-                    เลือกวิชาที่ต้องการ <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-600">ทบทวนบทเรียน ⚡</span>
+                    เลือกวิชาที่ต้องการ <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 via-indigo-600 to-amber-600">ทบทวนบทเรียน ⚡</span>
                 </h1>
                 <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
                     รวบรวมสรุปสูตร คีย์เวิร์ดสำคัญ การ์ดช่วยจำ Active Recall และแบบฝึกหัดเก็งข้อสอบ ดีไซน์อ่านง่ายสไตล์ Gen Z Minimal
@@ -85,55 +88,55 @@
         </section>
 
         <!-- Subject Selection Cards Grid -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
             <!-- Subject 1: Biology -->
-            <div class="bento-card rounded-3xl p-6 sm:p-8 space-y-6 flex flex-col justify-between hover:border-emerald-500/60 transition-all duration-300 group">
+            <div class="bento-card rounded-3xl p-6 sm:p-7 space-y-5 flex flex-col justify-between hover:border-emerald-500/60 transition-all duration-300 group">
                 <div class="space-y-4">
                     <div class="flex items-center justify-between">
-                        <div class="w-14 h-14 rounded-2xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-3xl shadow-sm">
+                        <div class="w-13 h-13 rounded-2xl bg-emerald-100 border border-emerald-200 flex items-center justify-center text-3xl shadow-sm">
                             🧬
                         </div>
                         <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
-                            A-Level 40 ข้อเน้นๆ
+                            40 ข้อ A-Level
                         </span>
                     </div>
                     <div>
-                        <h2 class="text-2xl font-extrabold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 group-hover:text-emerald-600 transition-colors">
                             ชีววิทยา (Biology)
                         </h2>
                         <p class="text-slate-600 text-xs sm:text-sm mt-1 leading-relaxed">
-                            สรุปชีวะ 5 บทสำคัญ: ระบบประสาท, ระบบต่อมไร้ท่อ, การเคลื่อนที่ (12 ข้อ ⭐), การตอบสนองของพืช และพฤติกรรมสัตว์
+                            สรุปชีวะ 5 บทสำคัญ: ระบบประสาท, ต่อมไร้ท่อ, การเคลื่อนที่ (12 ข้อ ⭐), พืช และพฤติกรรมสัตว์
                         </p>
                     </div>
 
-                    <div class="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-600">
+                    <div class="space-y-1.5 pt-2 border-t border-slate-100 text-xs text-slate-600">
                         <div class="flex items-center gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
-                            <span>ภาพประกอบ Diagram ความละเอียดสูง Inline</span>
+                            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                            <span>แผนภาพ Diagram Inline คมชัด</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
-                            <span>การ์ดจำคีย์เวิร์ด Active Recall Flashcards</span>
+                            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                            <span>การ์ดช่วยจำ Active Recall 15 ใบ</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
-                            <span>แบบทดสอบเก็งข้อสอบ 5 ข้อ พร้อมเฉลย</span>
+                            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600 shrink-0"></i>
+                            <span>แบบทดสอบเก็งข้อสอบ 5 ข้อ</span>
                         </div>
                     </div>
                 </div>
 
-                <a href="biology.html" class="w-full py-3.5 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm text-center shadow-md shadow-emerald-600/20 flex items-center justify-center gap-2 transition-all active:scale-98">
+                <a href="biology.html" class="w-full py-3 px-5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm text-center shadow-md shadow-emerald-600/20 flex items-center justify-center gap-2 transition-all active:scale-98">
                     <span>เข้าสู่บทเรียนชีววิทยา</span>
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
 
             <!-- Subject 2: Math Probability -->
-            <div class="bento-card rounded-3xl p-6 sm:p-8 space-y-6 flex flex-col justify-between hover:border-amber-500/60 transition-all duration-300 group">
+            <div class="bento-card rounded-3xl p-6 sm:p-7 space-y-5 flex flex-col justify-between hover:border-amber-500/60 transition-all duration-300 group">
                 <div class="space-y-4">
                     <div class="flex items-center justify-between">
-                        <div class="w-14 h-14 rounded-2xl bg-amber-100 border border-amber-200 flex items-center justify-center text-3xl shadow-sm">
+                        <div class="w-13 h-13 rounded-2xl bg-amber-100 border border-amber-200 flex items-center justify-center text-3xl shadow-sm">
                             📐
                         </div>
                         <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 border border-amber-200">
@@ -141,68 +144,103 @@
                         </span>
                     </div>
                     <div>
-                        <h2 class="text-2xl font-extrabold text-slate-900 group-hover:text-amber-600 transition-colors">
-                            คณิตศาสตร์: ความน่าจะเป็น & การจัดหมู่
+                        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 group-hover:text-amber-600 transition-colors">
+                            คณิตศาสตร์ (Math)
                         </h2>
                         <p class="text-slate-600 text-xs sm:text-sm mt-1 leading-relaxed">
-                            Cheat Sheet สรุปสูตรหลัก เทคนิคคิดไว $\binom{n}{r}$, กฎเซต, De Morgan, Derangement พร้อมชุดโจทย์วิเคราะห์ยาก 8 ข้อ
+                            Cheat Sheet สรุปสูตรความน่าจะเป็น & การจัดหมู่, กฎเซต, De Morgan พร้อมชุดโจทย์ยาก 8 ข้อ
                         </p>
                     </div>
 
-                    <div class="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-600">
+                    <div class="space-y-1.5 pt-2 border-t border-slate-100 text-xs text-slate-600">
                         <div class="flex items-center gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600"></i>
-                            <span>Cheat Sheet สรุปสูตร + Checkpoint ก่อนสอบ</span>
+                            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+                            <span>Cheat Sheet สรุปสูตร + Checkpoint</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600"></i>
-                            <span>ชุดโจทย์ประยุกต์ยาก 8 ข้อ พร้อมเฉลยละเอียด</span>
+                            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+                            <span>ชุดโจทย์แข่งขันยาก 8 ข้อ พร้อมเฉลย</span>
                         </div>
                         <div class="flex items-center gap-2">
-                            <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-600"></i>
-                            <span>การแสดงผลสูตรด้วย KaTeX อ่านง่าย คมชัด</span>
+                            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-600 shrink-0"></i>
+                            <span>เรนเดอร์สูตรด้วย KaTeX 100%</span>
                         </div>
                     </div>
                 </div>
 
-                <a href="math.html" class="w-full py-3.5 px-6 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-sm text-center shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-all active:scale-98">
+                <a href="math.html" class="w-full py-3 px-5 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-xs sm:text-sm text-center shadow-md shadow-amber-500/20 flex items-center justify-center gap-2 transition-all active:scale-98">
                     <span>เข้าสู่บทเรียนคณิตศาสตร์</span>
                     <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
 
-            <!-- Subject 3: Chemistry (Future Plan) -->
-            <div class="bento-card rounded-3xl p-6 space-y-4 opacity-75 border-dashed border-slate-300 bg-slate-50">
-                <div class="flex items-center justify-between">
-                    <div class="w-12 h-12 rounded-2xl bg-cyan-100 border border-cyan-200 flex items-center justify-center text-2xl">
-                        🧪
+            <!-- Subject 3: Social Studies -->
+            <div class="bento-card rounded-3xl p-6 sm:p-7 space-y-5 flex flex-col justify-between hover:border-indigo-500/60 transition-all duration-300 group">
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="w-13 h-13 rounded-2xl bg-indigo-100 border border-indigo-200 flex items-center justify-center text-3xl shadow-sm">
+                            🏛️
+                        </div>
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800 border border-indigo-200">
+                            ม.6 ปลายภาค
+                        </span>
                     </div>
-                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-200 text-slate-600 border border-slate-300 flex items-center gap-1">
-                        <i data-lucide="lock" class="w-3 h-3"></i> แผนพัฒนาในอนาคต
-                    </span>
+                    <div>
+                        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 group-hover:text-indigo-600 transition-colors">
+                            สังคมศึกษา (Social)
+                        </h2>
+                        <p class="text-slate-600 text-xs sm:text-sm mt-1 leading-relaxed">
+                            สรุปบทที่ 4 (ความขัดแย้ง & ความร่วมมือสากล, สงครามโลก, UN) และบทที่ 5 (อารยธรรมจีน อินเดีย อิสลาม)
+                        </p>
+                    </div>
+
+                    <div class="space-y-1.5 pt-2 border-t border-slate-100 text-xs text-slate-600">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-indigo-600 shrink-0"></i>
+                            <span>สรุป 2 บทสำคัญ ปลายภาค วศม6</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-indigo-600 shrink-0"></i>
+                            <span>วิเคราะห์สาเหตุสงคราม & องค์การสากล</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-indigo-600 shrink-0"></i>
+                            <span>การ์ดช่วยจำ Active Recall 8 ใบ</span>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-slate-800">เคมี (Chemistry A-Level)</h3>
-                    <p class="text-xs text-slate-500 mt-1">สรุปเคมีม.ปลาย โครงสร้างอะตอม พันธะเคมี ปริมาณสารสัมพันธ์ กรด-เบส เคมีไฟฟ้า</p>
-                </div>
+
+                <a href="social.html" class="w-full py-3 px-5 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold text-xs sm:text-sm text-center shadow-md shadow-indigo-600/20 flex items-center justify-center gap-2 transition-all active:scale-98">
+                    <span>เข้าสู่บทเรียนสังคมศึกษา</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
             </div>
 
-            <!-- Subject 4: Physics (Future Plan) -->
-            <div class="bento-card rounded-3xl p-6 space-y-4 opacity-75 border-dashed border-slate-300 bg-slate-50">
-                <div class="flex items-center justify-between">
-                    <div class="w-12 h-12 rounded-2xl bg-violet-100 border border-violet-200 flex items-center justify-center text-2xl">
-                        ⚡
+        </section>
+
+        <!-- Future Subjects Banner -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bento-card rounded-2xl p-4 flex items-center justify-between opacity-75 border-dashed border-slate-300 bg-slate-50">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl">🧪</span>
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-800">เคมี (Chemistry A-Level)</h4>
+                        <p class="text-[11px] text-slate-500">อะตอม พันธะ กรด-เบส เคมีไฟฟ้า</p>
                     </div>
-                    <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-200 text-slate-600 border border-slate-300 flex items-center gap-1">
-                        <i data-lucide="lock" class="w-3 h-3"></i> แผนพัฒนาในอนาคต
-                    </span>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-slate-800">ฟิสิกส์ (Physics A-Level)</h3>
-                    <p class="text-xs text-slate-500 mt-1">สรุปฟิสิกส์ม.ปลาย กลศาสตร์ การเคลื่อนที่ คลื่น แสง ไฟฟ้า ฟิสิกส์อะตอม</p>
-                </div>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-200 text-slate-600">กำลังเตรียม</span>
             </div>
 
+            <div class="bento-card rounded-2xl p-4 flex items-center justify-between opacity-75 border-dashed border-slate-300 bg-slate-50">
+                <div class="flex items-center gap-3">
+                    <span class="text-2xl">⚡</span>
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-800">ฟิสิกส์ (Physics A-Level)</h4>
+                        <p class="text-[11px] text-slate-500">กลศาสตร์ คลื่น ไฟฟ้า ฟิสิกส์ยุคใหม่</p>
+                    </div>
+                </div>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-200 text-slate-600">กำลังเตรียม</span>
+            </div>
         </section>
 
     </main>
