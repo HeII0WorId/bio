@@ -1,4 +1,4 @@
-// BIO PASS - Gen Z Biology Notes Interactive Engine (Light Theme & Full Inline Images)
+// BIO PASS - Gen Z Biology Notes Interactive Engine (Mobile Responsive & Light Theme)
 
 // Global State
 let currentChapter = 'all';
@@ -28,17 +28,17 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "ประเภทของเซลล์ประสาท (แบ่งตามหน้าที่)",
                         content: `
-                            <ul class="space-y-2 text-sm text-slate-700">
+                            <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
                                 <li class="flex items-start gap-2">
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 shrink-0">Sensory</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-bold bg-emerald-100 text-emerald-800 shrink-0">Sensory</span>
                                     <span><b>Sensory neuron (รับความรู้สึก):</b> ตัวเซลล์มักอยู่นอกระบบประสาทศูนย์กลาง เช่น บริเวณ <b>Dorsal root ganglion</b> (ปมประสาทรากบนของไขสันหลัง)</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-teal-100 text-teal-800 shrink-0">Interneuron</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-bold bg-teal-100 text-teal-800 shrink-0">Interneuron</span>
                                     <span><b>Interneuron (ประสานงาน):</b> อยู่ภายในระบบประสาทศูนย์กลาง (CNS: สมองและไขสันหลัง) <b>ทั้งหมด</b></span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-cyan-100 text-cyan-800 shrink-0">Motor</span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-bold bg-cyan-100 text-cyan-800 shrink-0">Motor</span>
                                     <span><b>Motor neuron (สั่งการ):</b> ตัวเซลล์อยู่ใน CNS ส่ง Axon ออกไปยึดกับ Effectors/Organs (เช่น สั่งการกล้ามเนื้อลาย)</span>
                                 </li>
                             </ul>
@@ -47,12 +47,12 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "ปัจจัยที่มีผลต่อความเร็วของกระแสประสาท (จุดเน้นวิเคราะห์)",
                         content: `
-                            <div class="grid sm:grid-cols-2 gap-3 mt-2">
-                                <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-2xl">
+                            <div class="grid sm:grid-cols-2 gap-2.5 sm:gap-3 mt-2">
+                                <div class="bg-slate-50 border border-slate-200 p-3 sm:p-3.5 rounded-2xl">
                                     <div class="font-bold text-xs text-emerald-700 mb-1">📏 เส้นผ่านศูนย์กลางของ Axon</div>
                                     <p class="text-xs text-slate-600">ยิ่งกว้าง ยิ่งส่งสัญญาณได้เร็วขึ้น เนื่องจากความต้านทานภายในเซลล์ (Internal resistance) ต่ำลง</p>
                                 </div>
-                                <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-2xl">
+                                <div class="bg-slate-50 border border-slate-200 p-3 sm:p-3.5 rounded-2xl">
                                     <div class="font-bold text-xs text-cyan-700 mb-1">⚡ เยื่อหุ้มไมอีลิน (Myelin Sheath)</div>
                                     <p class="text-xs text-slate-600">ทำให้เกิดการนำแบบก้าวกระโดด (<b>Saltatory conduction</b>) บริเวณ <b>Node of Ranvier</b> ซึ่งเป็นจุดที่มี Voltage-gated Na⁺ channel หนาแน่นที่สุด</p>
                                 </div>
@@ -63,19 +63,19 @@ const CHAPTERS_DATA = [
                         subTitle: "ขั้นตอนการเกิด Action Potential (ลำดับศักย์ไฟฟ้า)",
                         content: `
                             <div class="space-y-2 mt-2">
-                                <div class="p-3 rounded-2xl bg-slate-100 border border-slate-200 text-xs text-slate-800">
+                                <div class="p-2.5 sm:p-3 rounded-2xl bg-slate-100 border border-slate-200 text-xs text-slate-800">
                                     <span class="font-bold text-slate-900">1. Resting State (-70 mV):</span> Na⁺/K⁺ pump (3 Na⁺ ออก, 2 K⁺ เข้า) ร่วมกับ K⁺ leak channel ที่ปล่อย K⁺ รั่วออก
                                 </div>
-                                <div class="p-3 rounded-2xl bg-emerald-50 border border-emerald-200 text-xs text-slate-800">
+                                <div class="p-2.5 sm:p-3 rounded-2xl bg-emerald-50 border border-emerald-200 text-xs text-slate-800">
                                     <span class="font-bold text-emerald-800">2. Depolarization:</span> สิ่งเร้ากระตุ้นถึง Threshold (-55 mV) &rarr; Voltage-gated Na⁺ channel เปิด &rarr; Na⁺ ทะลักเข้าเซลล์ ศักย์ไฟฟ้าพุ่งขึ้นแตะ <b class="text-emerald-700 font-extrabold">+35 mV</b>
                                 </div>
-                                <div class="p-3 rounded-2xl bg-teal-50 border border-teal-200 text-xs text-slate-800">
+                                <div class="p-2.5 sm:p-3 rounded-2xl bg-teal-50 border border-teal-200 text-xs text-slate-800">
                                     <span class="font-bold text-teal-800">3. Repolarization:</span> Voltage-gated Na⁺ ปิด &rarr; Voltage-gated K⁺ channel เปิด &rarr; K⁺ ไหลทะลักออกนอกเซลล์ ศักย์ไฟฟ้าดิ่งลง
                                 </div>
-                                <div class="p-3 rounded-2xl bg-cyan-50 border border-cyan-200 text-xs text-slate-800">
+                                <div class="p-2.5 sm:p-3 rounded-2xl bg-cyan-50 border border-cyan-200 text-xs text-slate-800">
                                     <span class="font-bold text-cyan-800">4. Hyperpolarization (-80 mV):</span> Voltage-gated K⁺ ปิดช้า ทำให้ K⁺ ออกเกิน ศักย์ไฟฟ้าลดต่ำกว่า Resting state
                                 </div>
-                                <div class="p-3 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
+                                <div class="p-2.5 sm:p-3 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
                                     <b>Refractory Period:</b> ช่วงดื้อ Absolute (เกิด Action Potential ซ้ำไม่ได้เด็ดขาด) และ Relative (เกิดซ้ำได้หากสิ่งเร้าแรงกว่าปกติมาก)
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "Chemical Synapse & สารสื่อประสาท",
                         content: `
-                            <p class="text-xs text-slate-700 leading-relaxed">
+                            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
                                 เมื่อ Action Potential มาถึงปลาย Axon &rarr; <b>Voltage-gated Ca²⁺ channel เปิด</b> &rarr; Ca²⁺ ไหลเข้าสู่ปลายประสาท &rarr; กระตุ้นให้ถุงบรรจุสารสื่อประสาทหลอมรวมเยื่อหุ้มเซลล์ทำ <b>Exocytosis</b> ปลดปล่อย Neurotransmitter (เช่น Acetylcholine, Norepinephrine) ข้าม Synaptic cleft
                             </p>
                         `
@@ -100,7 +100,7 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "กลไกการมองเห็นและการทรงตัว (ประสาทสัมผัส)",
                         content: `
-                            <div class="grid sm:grid-cols-2 gap-3 mt-2">
+                            <div class="grid sm:grid-cols-2 gap-2.5 sm:gap-3 mt-2">
                                 <div class="p-3 bg-slate-50 border border-slate-200 rounded-2xl text-xs text-slate-700">
                                     <span class="font-bold text-amber-700 block mb-1">👁️ การมองเห็น (ตา)</span>
                                     อาศัยสารสี <b>Rhodopsin</b> (Opsin + Retinal) เมื่อถูกแสง Retinal จะเปลี่ยนรูปร่างจาก <i>cis</i> เป็น <i>trans</i> ทำให้ Rhodopsin แตกตัว ส่งสัญญาณประสาทเข้าสู่สมอง
@@ -124,12 +124,12 @@ const CHAPTERS_DATA = [
                         subTitle: "เส้นประสาทสมอง (Cranial Nerves 12 คู่) - ตัวท็อปออกสอบ",
                         content: `
                             <div class="space-y-2 text-xs text-slate-700">
-                                <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
-                                    <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold shrink-0">รับรู้สึกอย่างเดียว</span>
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                                    <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold shrink-0 w-fit">รับรู้สึกอย่างเดียว</span>
                                     <span><b>คู่ที่ 1 (Olfactory - กลิ่น)</b>, <b>คู่ที่ 2 (Optic - มองเห็น)</b>, <b>คู่ที่ 8 (Vestibulocochlear - ฟัง/ทรงตัว)</b></span>
                                 </div>
-                                <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
-                                    <span class="px-2 py-0.5 rounded bg-violet-100 text-violet-800 font-bold shrink-0">Vagus Nerve (คู่ที่ 10)</span>
+                                <div class="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+                                    <span class="px-2 py-0.5 rounded bg-violet-100 text-violet-800 font-bold shrink-0 w-fit">Vagus Nerve (คู่ที่ 10)</span>
                                     <span>เส้นประสาทพาราซิมพาเทติกสายหลัก เลี้ยงอวัยวะภายในช่องอกและช่องท้องทั้งหมด</span>
                                 </div>
                             </div>
@@ -138,8 +138,8 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "ตารางเปรียบเทียบระบบประสาทอัตโนวัติ (Autonomic Nervous System)",
                         content: `
-                            <div class="overflow-x-auto mt-2">
-                                <table class="w-full text-xs text-left text-slate-700 border border-slate-200 rounded-xl overflow-hidden">
+                            <div class="overflow-x-auto mt-2 no-scrollbar">
+                                <table class="w-full min-w-[500px] text-xs text-left text-slate-700 border border-slate-200 rounded-xl overflow-hidden">
                                     <thead class="bg-slate-100 text-slate-900 font-bold">
                                         <tr>
                                             <th class="p-2.5 border-b border-slate-200">ระบบ</th>
@@ -189,7 +189,7 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "เปรียบเทียบกลไกของฮอร์โมน 2 กลุ่มหลัก",
                         content: `
-                            <div class="grid sm:grid-cols-2 gap-3 mt-2 text-xs">
+                            <div class="grid sm:grid-cols-2 gap-2.5 sm:gap-3 mt-2 text-xs">
                                 <div class="bg-slate-50 border border-slate-200 p-3 rounded-2xl">
                                     <span class="px-2 py-0.5 rounded bg-cyan-100 text-cyan-800 font-bold">Amine / Peptide / Protein</span>
                                     <p class="mt-2 text-slate-700"><b>ละลายน้ำได้ดี:</b> ไม่สามารถแพร่ผ่านเยื่อหุ้มเซลล์ไขมันได้ ต้องจับกับ <b>Receptor บนเยื่อหุ้มเซลล์</b> (เช่น Insulin, Glucagon, ADH, TSH)</p>
@@ -211,8 +211,8 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "สรุปต่อมและฮอร์โมนออกสอบบ่อย",
                         content: `
-                            <div class="overflow-x-auto mt-2">
-                                <table class="w-full text-xs text-left text-slate-700 border border-slate-200 rounded-xl overflow-hidden">
+                            <div class="overflow-x-auto mt-2 no-scrollbar">
+                                <table class="w-full min-w-[550px] text-xs text-left text-slate-700 border border-slate-200 rounded-xl overflow-hidden">
                                     <thead class="bg-slate-100 text-slate-900 font-bold">
                                         <tr>
                                             <th class="p-2.5 border-b border-slate-200">ต่อม / เนื้อเยื่อ</th>
@@ -279,7 +279,7 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "ความผิดปกติของระบบต่อมไร้ท่อ (โรคที่ออกสอบบ่อย)",
                         content: `
-                            <div class="grid sm:grid-cols-2 gap-3 mt-2 text-xs">
+                            <div class="grid sm:grid-cols-2 gap-2.5 sm:gap-3 mt-2 text-xs">
                                 <div class="bg-slate-50 border border-slate-200 p-3 rounded-2xl space-y-1">
                                     <div class="font-bold text-amber-700">💧 Diabetes Insipidus (เบาจืด)</div>
                                     <p class="text-slate-600">ขาด ADH ทำให้ท่อขดส่วนปลายและท่อรวมดูดน้ำกลับไม่ได้ ปัสสาวะเจือจางและปริมาณมาก</p>
@@ -319,7 +319,7 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "กลไกการเคลื่อนที่ของสิ่งมีชีวิตกลุ่มต่างๆ",
                         content: `
-                            <div class="grid sm:grid-cols-2 gap-3 text-xs">
+                            <div class="grid sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs">
                                 <div class="bg-slate-50 border border-slate-200 p-3 rounded-2xl">
                                     <span class="font-bold text-amber-700">🦠 Amoeba:</span> ใช้ <b>Pseudopodium</b> (เท้าเทียม) เกิดจาก <b>Microfilament (Actin)</b> เปลี่ยนกลับไปมาระหว่าง Ectoplasm (Gel) และ Endoplasm (Sol)
                                 </div>
@@ -339,7 +339,7 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "กลไกการเคลื่อนที่ของแมลง (Insect Antagonism)",
                         content: `
-                            <p class="text-xs text-slate-700 leading-relaxed mt-1">
+                            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mt-1">
                                 ยึดกล้ามเนื้อกับเปลือกนอก (Exoskeleton) มีกล้ามเนื้อ 2 ชุดทำงานตรงข้ามกัน (<b>Antagonism</b>):<br>
                                 - <b>Extensor (สยายขา)</b> vs <b>Flexor (งอขา)</b><br>
                                 - <b>การบิน:</b> กล้ามเนื้อยึดเปลือกหุ้มอกตามยาว และ กล้ามเนื้อยึดเปลือกหุ้มอกตามรูปตั้ง ทำงานสลับกัน
@@ -359,7 +359,7 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "ข้อต่อ (Joints) & เอ็นยึด",
                         content: `
-                            <div class="grid sm:grid-cols-2 gap-3 text-xs">
+                            <div class="grid sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs">
                                 <div class="p-3 bg-slate-50 border border-slate-200 rounded-2xl text-slate-700">
                                     <b>Hinge joint (ข้อพับ):</b> ข้อศอก ข้อเข่า (ทิศทางเดียว)<br>
                                     <b>Ball and Socket joint (เบ้า):</b> หัวไหล่ ข้อสะโพก (หมุนได้หลายทิศทาง)
@@ -374,11 +374,11 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "Sliding Filament Theory (กลไกการหดตัวระดับโมเลกุล)",
                         content: `
-                            <div class="space-y-2 text-xs text-slate-700 mt-2">
+                            <div class="space-y-2 text-xs sm:text-sm text-slate-700 mt-2">
                                 <p><b>Sarcomere:</b> หน่วยการหดตัวของกล้ามเนื้อลาย (วัดจาก Z-line ถึง Z-line)</p>
                                 <p>• <b>Thick Filament:</b> ประกอบด้วยโปรตีน Myosin<br>
                                 • <b>Thin Filament:</b> ประกอบด้วย Actin, Tropomyosin และ Troponin</p>
-                                <div class="bg-slate-50 border border-slate-200 p-3.5 rounded-2xl space-y-1.5">
+                                <div class="bg-slate-50 border border-slate-200 p-3 sm:p-3.5 rounded-2xl space-y-1.5 text-xs">
                                     <div class="font-bold text-amber-800">🔄 ลำดับขั้นตอนการหดตัว:</div>
                                     <ol class="list-decimal list-inside space-y-1 text-slate-700">
                                         <li>Action Potential ลงมาตาม <b>T-tubule</b> &rarr; กระตุ้นการหลั่ง Ca²⁺ จาก <b>Sarcoplasmic Reticulum (SR)</b></li>
@@ -394,7 +394,7 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "การเปลี่ยนแปลงความยาว Sarcomere ขณะกล้ามเนื้อหดตัว (ออกสอบทุกปี!)",
                         content: `
-                            <div class="grid sm:grid-cols-3 gap-2 text-xs mt-2">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs mt-2">
                                 <div class="p-2.5 bg-emerald-100 border border-emerald-300 rounded-xl text-center text-emerald-900">
                                     <span class="font-bold block">A-band</span>
                                     ความยาวเท่าเดิมเสมอ!
@@ -462,7 +462,7 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "สรุปฮอร์โมนพืช 5 กลุ่มหลัก",
                         content: `
-                            <div class="space-y-3 text-xs text-slate-700">
+                            <div class="space-y-2.5 sm:space-y-3 text-xs text-slate-700">
                                 <div class="p-3 bg-slate-50 border border-slate-200 rounded-2xl">
                                     <b class="text-emerald-700 text-sm">🌱 Auxin (IAA):</b>
                                     <p class="mt-1 text-slate-600">• กระตุ้นการขยายตัวของเซลล์ (<b>Cell Elongation</b>) ทางด้านมืด (หนีแสง)<br>
@@ -502,7 +502,7 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "การจำแนกทิศทางการเคลื่อนไหว",
                         content: `
-                            <div class="grid sm:grid-cols-2 gap-3 text-xs text-slate-700">
+                            <div class="grid sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs text-slate-700">
                                 <div class="p-3 bg-slate-50 border border-slate-200 rounded-2xl">
                                     <b class="text-cyan-700">Tropism (Tropic movement):</b> ทิศทางสัมพันธ์กับสิ่งเร้า เช่น Phototropism (โค้งหาแสง), Geotropism (ตอบสนองแรงโน้มถ่วง)
                                 </div>
@@ -546,7 +546,7 @@ const CHAPTERS_DATA = [
                         content: `
                             <div class="space-y-2 text-xs text-slate-700">
                                 <p>เกิดจากพันธุกรรม ไม่ต้องเรียนรู้ มีแบบแผนแน่นอน (Stereotyped)</p>
-                                <div class="grid sm:grid-cols-2 gap-3">
+                                <div class="grid sm:grid-cols-2 gap-2.5 sm:gap-3">
                                     <div class="p-3 bg-slate-50 border border-slate-200 rounded-2xl">
                                         <b class="text-pink-700 block mb-1">🧭 Orientation (Kinesis vs Taxis)</b>
                                         • <b>Kinesis:</b> เคลื่อนที่ตอบสนองสิ่งเร้าแบบ<b>ไม่มีทิศทางแน่นอน</b> (ความเร็วขึ้นกับความเข้มสิ่งเร้า) เช่น แมลงชอนไชไปในที่ชื้น<br>
@@ -615,7 +615,7 @@ const CHAPTERS_DATA = [
                     {
                         subTitle: "ประเภทของฟีโรโมน (Pheromones)",
                         content: `
-                            <div class="grid sm:grid-cols-2 gap-3 text-xs mt-2 text-slate-700">
+                            <div class="grid sm:grid-cols-2 gap-2.5 sm:gap-3 text-xs mt-2 text-slate-700">
                                 <div class="p-3 bg-slate-50 border border-slate-200 rounded-2xl">
                                     <b class="text-purple-700">Primer Pheromone:</b> ส่งผลต่อระบบต่อมไร้ท่อและฮอร์โมนในระยะยาว (เช่น ฟีโรโมนนางพญายับยั้งการเจริญของรังไข่ในผึ้งงาน)
                                 </div>
@@ -723,7 +723,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupSearchEngine();
 });
 
-// Render Bento Notes View (With Full Inline Images)
+// Render Bento Notes View (Mobile Responsive)
 function renderNotesView() {
     const container = document.getElementById("viewNotes");
     container.innerHTML = "";
@@ -734,30 +734,30 @@ function renderNotesView() {
 
     activeChapters.forEach(ch => {
         const chapterCard = document.createElement("div");
-        chapterCard.className = "space-y-6 animate-fade-in";
+        chapterCard.className = "space-y-4 sm:space-y-6 animate-fade-in";
         chapterCard.id = `chapter-${ch.id}`;
 
         let sectionsHtml = "";
         ch.sections.forEach(sec => {
             const isCompleted = isSectionCompleted(sec.id);
 
-            // Full Inline Diagram Card
+            // Responsive Full Inline Diagram Card
             let diagramHtml = "";
             if (sec.hasDiagram) {
                 diagramHtml = `
-                    <div class="mt-4 p-4 bg-slate-50 border border-slate-200/90 rounded-2xl space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center gap-1.5">
-                                <i data-lucide="image" class="w-3.5 h-3.5"></i> แผนภาพสรุป: ${sec.diagramTitle}
+                    <div class="mt-3 sm:mt-4 p-3 sm:p-4 bg-slate-50 border border-slate-200/90 rounded-2xl space-y-2">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg text-[11px] sm:text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center gap-1">
+                                <i data-lucide="image" class="w-3.5 h-3.5"></i> สรุป: ${sec.diagramTitle}
                             </span>
-                            <button onclick="openImageModal('${sec.diagramPath}', '${sec.diagramTitle}', '${sec.diagramCaption}')" class="text-xs text-emerald-700 hover:text-emerald-800 font-bold flex items-center gap-1 underline">
-                                <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> ขยายเต็มจอ
+                            <button onclick="openImageModal('${sec.diagramPath}', '${sec.diagramTitle}', '${sec.diagramCaption}')" class="text-[11px] sm:text-xs text-emerald-700 hover:text-emerald-800 font-bold flex items-center gap-1 underline shrink-0">
+                                <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i> ดูภาพขยาย
                             </button>
                         </div>
-                        <div class="overflow-hidden rounded-xl bg-white p-2 border border-slate-200 shadow-sm cursor-pointer" onclick="openImageModal('${sec.diagramPath}', '${sec.diagramTitle}', '${sec.diagramCaption}')">
-                            <img src="${sec.diagramPath}" alt="${sec.diagramTitle}" class="w-full max-h-[480px] object-contain mx-auto rounded-lg transition-transform duration-300 hover:scale-[1.01]">
+                        <div class="overflow-hidden rounded-xl bg-white p-1.5 sm:p-2 border border-slate-200 shadow-sm cursor-pointer" onclick="openImageModal('${sec.diagramPath}', '${sec.diagramTitle}', '${sec.diagramCaption}')">
+                            <img src="${sec.diagramPath}" alt="${sec.diagramTitle}" class="w-full max-h-[360px] sm:max-h-[480px] object-contain mx-auto rounded-lg transition-transform duration-300 hover:scale-[1.01]">
                         </div>
-                        <p class="text-xs text-slate-600 text-center font-medium">${sec.diagramCaption}</p>
+                        <p class="text-[11px] sm:text-xs text-slate-600 text-center font-medium">${sec.diagramCaption}</p>
                     </div>
                 `;
             }
@@ -765,11 +765,11 @@ function renderNotesView() {
             let examTipHtml = "";
             if (sec.examTip) {
                 examTipHtml = `
-                    <div class="mt-4 p-3.5 rounded-2xl exam-trap-box flex items-start gap-3">
-                        <span class="text-lg">🔥</span>
+                    <div class="mt-3 sm:mt-4 p-3 sm:p-3.5 rounded-2xl exam-trap-box flex items-start gap-2.5">
+                        <span class="text-base sm:text-lg shrink-0">🔥</span>
                         <div class="text-xs">
                             <span class="font-bold text-red-700 block mb-0.5">จุดที่ข้อสอบชอบเอามาลวง! (Exam Trap)</span>
-                            <p class="text-slate-800 leading-relaxed font-medium">${sec.examTip}</p>
+                            <p class="text-slate-800 leading-relaxed font-medium text-[11px] sm:text-xs">${sec.examTip}</p>
                         </div>
                     </div>
                 `;
@@ -778,25 +778,25 @@ function renderNotesView() {
             let topicsHtml = sec.topics.map(t => `
                 <div class="space-y-1.5">
                     <h5 class="text-xs font-bold text-emerald-800 flex items-center gap-1.5">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> ${t.subTitle}
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span> ${t.subTitle}
                     </h5>
                     ${t.content}
                 </div>
             `).join("");
 
             sectionsHtml += `
-                <div class="bento-card rounded-3xl p-5 sm:p-6 space-y-4">
-                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
-                        <div class="flex items-center gap-3">
-                            <button onclick="toggleSectionProgress('${sec.id}')" class="w-6 h-6 rounded-lg border ${isCompleted ? 'bg-emerald-600 border-emerald-600 text-white' : 'border-slate-300 bg-white text-transparent'} flex items-center justify-center transition-all">
-                                <i data-lucide="check" class="w-4 h-4 font-bold"></i>
+                <div class="bento-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3.5 sm:space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                        <div class="flex items-center gap-2.5">
+                            <button onclick="toggleSectionProgress('${sec.id}')" class="w-5 h-5 sm:w-6 sm:h-6 rounded-lg border ${isCompleted ? 'bg-emerald-600 border-emerald-600 text-white' : 'border-slate-300 bg-white text-transparent'} flex items-center justify-center transition-all shrink-0">
+                                <i data-lucide="check" class="w-3.5 h-3.5 sm:w-4 sm:h-4 font-bold"></i>
                             </button>
-                            <h4 class="text-sm sm:text-base font-bold text-slate-900 tracking-tight">${sec.title}</h4>
+                            <h4 class="text-xs sm:text-base font-bold text-slate-900 tracking-tight leading-snug">${sec.title}</h4>
                         </div>
-                        <span class="text-[11px] font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full border border-slate-200">${isCompleted ? '✓ ทบทวนแล้ว' : 'ยังไม่ได้อ่าน'}</span>
+                        <span class="text-[10px] sm:text-[11px] font-medium text-slate-500 bg-slate-100 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full border border-slate-200 shrink-0">${isCompleted ? '✓ ทบทวนแล้ว' : 'ยังไม่อ่าน'}</span>
                     </div>
 
-                    <div class="space-y-4">
+                    <div class="space-y-3 sm:space-y-4">
                         ${topicsHtml}
                     </div>
 
@@ -807,20 +807,20 @@ function renderNotesView() {
         });
 
         chapterCard.innerHTML = `
-            <div class="flex items-center justify-between bg-white p-4 rounded-3xl border border-slate-200/80 shadow-sm">
-                <div class="flex items-center gap-3">
-                    <span class="text-3xl">${ch.icon}</span>
+            <div class="flex items-center justify-between bg-white p-3.5 sm:p-4 rounded-2xl sm:rounded-3xl border border-slate-200/80 shadow-sm">
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                    <span class="text-2xl sm:text-3xl">${ch.icon}</span>
                     <div>
-                        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <h3 class="text-sm sm:text-lg font-bold text-slate-900 leading-snug">
                             ${ch.title}
                         </h3>
-                        <span class="text-xs text-slate-500">สัดส่วนในข้อสอบ: <b class="text-emerald-700">${ch.weight}</b></span>
+                        <span class="text-[11px] sm:text-xs text-slate-500">สัดส่วนในข้อสอบ: <b class="text-emerald-700">${ch.weight}</b></span>
                     </div>
                 </div>
-                <span class="px-3 py-1 rounded-full text-xs font-bold ${ch.badgeColor}">${ch.weight}</span>
+                <span class="px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold ${ch.badgeColor} shrink-0 hidden sm:inline-block">${ch.weight}</span>
             </div>
 
-            <div class="grid grid-cols-1 gap-6">
+            <div class="grid grid-cols-1 gap-4 sm:gap-6">
                 ${sectionsHtml}
             </div>
         `;
@@ -831,27 +831,45 @@ function renderNotesView() {
     lucide.createIcons();
 }
 
-// Search Engine
+// Search Engine for both Desktop and Mobile Inputs
 function setupSearchEngine() {
-    const input = document.getElementById("searchInput");
-    const clearBtn = document.getElementById("clearSearch");
+    const desktopInput = document.getElementById("searchInput");
+    const desktopClear = document.getElementById("clearSearch");
+    const mobileInput = document.getElementById("searchInputMobile");
+    const mobileClear = document.getElementById("clearSearchMobile");
 
-    input.addEventListener("input", (e) => {
-        const query = e.target.value.trim().toLowerCase();
+    const handleSearch = (val, clearBtn) => {
+        const query = val.trim().toLowerCase();
         if (query.length > 0) {
-            clearBtn.classList.remove("hidden");
+            if (clearBtn) clearBtn.classList.remove("hidden");
             performSearch(query);
         } else {
-            clearBtn.classList.add("hidden");
+            if (clearBtn) clearBtn.classList.add("hidden");
             renderNotesView();
         }
-    });
+    };
 
-    clearBtn.addEventListener("click", () => {
-        input.value = "";
-        clearBtn.classList.add("hidden");
-        renderNotesView();
-    });
+    if (desktopInput) {
+        desktopInput.addEventListener("input", (e) => handleSearch(e.target.value, desktopClear));
+    }
+    if (mobileInput) {
+        mobileInput.addEventListener("input", (e) => handleSearch(e.target.value, mobileClear));
+    }
+
+    if (desktopClear) {
+        desktopClear.addEventListener("click", () => {
+            desktopInput.value = "";
+            desktopClear.classList.add("hidden");
+            renderNotesView();
+        });
+    }
+    if (mobileClear) {
+        mobileClear.addEventListener("click", () => {
+            mobileInput.value = "";
+            mobileClear.classList.add("hidden");
+            renderNotesView();
+        });
+    }
 }
 
 function performSearch(query) {
@@ -871,7 +889,7 @@ function performSearch(query) {
                 hasMatch = true;
 
                 const matchCard = document.createElement("div");
-                matchCard.className = "bento-card rounded-3xl p-5 sm:p-6 space-y-4 animate-fade-in";
+                matchCard.className = "bento-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 animate-fade-in";
                 
                 let topicsHtml = sec.topics.map(t => `
                     <div class="space-y-1.5">
@@ -885,9 +903,9 @@ function performSearch(query) {
                 matchCard.innerHTML = `
                     <div class="flex items-center justify-between border-b border-slate-100 pb-2">
                         <span class="text-xs font-bold text-emerald-700">${ch.title}</span>
-                        <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200 font-bold">ผลการค้นหา</span>
+                        <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200 font-bold">ผลค้นหา</span>
                     </div>
-                    <h4 class="text-sm font-bold text-slate-900">${sec.title}</h4>
+                    <h4 class="text-xs sm:text-sm font-bold text-slate-900">${sec.title}</h4>
                     <div class="space-y-3">${topicsHtml}</div>
                 `;
 
@@ -900,7 +918,7 @@ function performSearch(query) {
         container.innerHTML = `
             <div class="text-center py-12 space-y-3">
                 <div class="text-4xl">🔍</div>
-                <h4 class="text-base font-bold text-slate-700">ไม่พบคำค้นหาที่ตรงกับ "${query}"</h4>
+                <h4 class="text-sm sm:text-base font-bold text-slate-700">ไม่พบคำค้นหาที่ตรงกับ "${query}"</h4>
                 <p class="text-xs text-slate-400">ลองค้นหาด้วยคำอื่น เช่น Action Potential, Auxin, Sarcomere, ADH...</p>
             </div>
         `;
@@ -909,28 +927,51 @@ function performSearch(query) {
     lucide.createIcons();
 }
 
-// View Mode Toggle
+// View Mode Toggle (Sync Desktop & Mobile Navbars)
 function toggleViewMode(mode) {
     currentViewMode = mode;
 
     document.querySelectorAll(".view-content").forEach(el => el.classList.add("hidden"));
+    
+    // Desktop Nav Buttons
     document.querySelectorAll(".view-tab-btn").forEach(btn => {
         btn.classList.remove("active", "bg-emerald-600", "text-white", "shadow-md");
         btn.classList.add("bg-white", "text-slate-700");
     });
 
+    // Mobile Bottom Nav Buttons
+    const mNotes = document.getElementById("mBtnNotes");
+    const mCards = document.getElementById("mBtnFlashcards");
+    const mQuiz = document.getElementById("mBtnQuiz");
+
+    if (mNotes && mCards && mQuiz) {
+        [mNotes, mCards, mQuiz].forEach(b => {
+            b.classList.remove("text-emerald-600");
+            b.classList.add("text-slate-500");
+        });
+    }
+
     if (mode === 'notes') {
         document.getElementById("viewNotes").classList.remove("hidden");
-        document.getElementById("btnViewNotes").classList.add("active", "bg-emerald-600", "text-white", "shadow-md");
-        document.getElementById("btnViewNotes").classList.remove("bg-white", "text-slate-700");
+        document.getElementById("btnViewNotes")?.classList.add("active", "bg-emerald-600", "text-white", "shadow-md");
+        if (mNotes) {
+            mNotes.classList.remove("text-slate-500");
+            mNotes.classList.add("text-emerald-600");
+        }
     } else if (mode === 'flashcards') {
         document.getElementById("viewFlashcards").classList.remove("hidden");
-        document.getElementById("btnViewFlashcards").classList.add("active", "bg-emerald-600", "text-white", "shadow-md");
-        document.getElementById("btnViewFlashcards").classList.remove("bg-white", "text-slate-700");
+        document.getElementById("btnViewFlashcards")?.classList.add("active", "bg-emerald-600", "text-white", "shadow-md");
+        if (mCards) {
+            mCards.classList.remove("text-slate-500");
+            mCards.classList.add("text-emerald-600");
+        }
     } else if (mode === 'quiz') {
         document.getElementById("viewQuiz").classList.remove("hidden");
-        document.getElementById("btnViewQuiz").classList.add("active", "bg-emerald-600", "text-white", "shadow-md");
-        document.getElementById("btnViewQuiz").classList.remove("bg-white", "text-slate-700");
+        document.getElementById("btnViewQuiz")?.classList.add("active", "bg-emerald-600", "text-white", "shadow-md");
+        if (mQuiz) {
+            mQuiz.classList.remove("text-slate-500");
+            mQuiz.classList.add("text-emerald-600");
+        }
     }
 
     lucide.createIcons();
@@ -941,11 +982,11 @@ function filterChapter(chapId) {
     currentChapter = chapId;
 
     document.querySelectorAll(".chapter-tab-btn").forEach(btn => {
-        btn.classList.remove("active", "bg-emerald-600", "text-white", "shadow-md");
+        btn.classList.remove("active", "bg-emerald-600", "text-white", "shadow-sm");
         btn.classList.add("bg-slate-100", "text-slate-700");
     });
 
-    event.currentTarget.classList.add("active", "bg-emerald-600", "text-white", "shadow-md");
+    event.currentTarget.classList.add("active", "bg-emerald-600", "text-white", "shadow-sm");
     event.currentTarget.classList.remove("bg-slate-100", "text-slate-700");
 
     renderNotesView();
@@ -1011,20 +1052,20 @@ function renderQuizView() {
 
     QUIZ_QUESTIONS.forEach((q, qIndex) => {
         const qCard = document.createElement("div");
-        qCard.className = "bento-card rounded-3xl p-6 space-y-4 animate-fade-in";
+        qCard.className = "bento-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-3 sm:space-y-4 animate-fade-in";
         qCard.id = `quizCard-${q.id}`;
 
         let optionsHtml = q.options.map((opt, optIdx) => `
-            <label class="flex items-center gap-3 p-3.5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 cursor-pointer transition-all">
-                <input type="radio" name="quizOpt_${q.id}" value="${optIdx}" onchange="selectQuizOption(${q.id}, ${optIdx})" class="w-4 h-4 text-emerald-600 accent-emerald-600">
-                <span class="text-xs text-slate-800 font-medium">${opt}</span>
+            <label class="flex items-center gap-3 p-3 rounded-2xl bg-slate-50 border border-slate-200 hover:border-emerald-500 cursor-pointer transition-all active:scale-[0.99]">
+                <input type="radio" name="quizOpt_${q.id}" value="${optIdx}" onchange="selectQuizOption(${q.id}, ${optIdx})" class="w-4 h-4 text-emerald-600 accent-emerald-600 shrink-0">
+                <span class="text-xs text-slate-800 font-medium leading-normal">${opt}</span>
             </label>
         `).join("");
 
         qCard.innerHTML = `
-            <h4 class="text-sm font-bold text-slate-900 leading-relaxed">${q.question}</h4>
-            <div class="grid grid-cols-1 gap-2.5">${optionsHtml}</div>
-            <div id="quizExplain_${q.id}" class="hidden mt-3 p-3.5 rounded-2xl text-xs space-y-1"></div>
+            <h4 class="text-xs sm:text-sm font-bold text-slate-900 leading-relaxed">${q.question}</h4>
+            <div class="grid grid-cols-1 gap-2">${optionsHtml}</div>
+            <div id="quizExplain_${q.id}" class="hidden mt-3 p-3 rounded-2xl text-xs space-y-1"></div>
         `;
 
         container.appendChild(qCard);
@@ -1045,23 +1086,23 @@ function checkQuizAnswers() {
 
         if (userChoice === q.correct) {
             score++;
-            explainBox.className = "mt-3 p-3.5 rounded-2xl text-xs bg-emerald-50 border border-emerald-200 text-emerald-900 font-medium";
+            explainBox.className = "mt-3 p-3 rounded-2xl text-xs bg-emerald-50 border border-emerald-200 text-emerald-900 font-medium";
             explainBox.innerHTML = `<b>✓ ถูกต้อง!</b><br>${q.explanation}`;
         } else {
-            explainBox.className = "mt-3 p-3.5 rounded-2xl text-xs bg-rose-50 border border-rose-200 text-rose-900 font-medium";
+            explainBox.className = "mt-3 p-3 rounded-2xl text-xs bg-rose-50 border border-rose-200 text-rose-900 font-medium";
             explainBox.innerHTML = `<b>✕ ยังไม่ถูกต้อง (เฉลยข้อ ${q.correct + 1})</b><br>${q.explanation}`;
         }
     });
 
     const resultBox = document.getElementById("quizScoreResult");
     resultBox.classList.remove("hidden");
-    resultBox.innerHTML = `🎉 คุณได้คะแนน: <span class="text-2xl font-black text-emerald-600">${score} / ${QUIZ_QUESTIONS.length}</span> คะแนน`;
+    resultBox.innerHTML = `🎉 คุณได้คะแนน: <span class="text-xl sm:text-2xl font-black text-emerald-600">${score} / ${QUIZ_QUESTIONS.length}</span> คะแนน`;
 }
 
 // Image Modal Handler
 function openImageModal(imgSrc, title, caption) {
     document.getElementById("modalImage").src = imgSrc;
-    document.getElementById("modalTitle").innerHTML = `<i data-lucide="image" class="w-5 h-5 text-emerald-600"></i> ${title}`;
+    document.getElementById("modalTitle").innerHTML = `<i data-lucide="image" class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600"></i> ${title}`;
     document.getElementById("modalCaption").textContent = caption;
     document.getElementById("imageModal").classList.remove("hidden");
     lucide.createIcons();
@@ -1104,7 +1145,7 @@ function loadProgress() {
 
     document.getElementById("progressPercent").textContent = `${percent}%`;
     document.getElementById("progressBar").style.width = `${percent}%`;
-    document.getElementById("progressText").textContent = `${count} จาก ${totalSections} หัวข้อย่อย`;
+    document.getElementById("progressText").textContent = `${count} / ${totalSections} หัวข้อย่อย`;
 }
 
 function resetProgress() {
@@ -1120,7 +1161,7 @@ function scrollToTop() {
 
 window.addEventListener("scroll", () => {
     const btn = document.getElementById("btnBackToTop");
-    if (window.scrollY > 300) {
+    if (window.scrollY > 250) {
         btn.classList.remove("opacity-0", "pointer-events-none");
     } else {
         btn.classList.add("opacity-0", "pointer-events-none");
