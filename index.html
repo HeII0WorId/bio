@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIO PASS ⚡ ชีวะม.ปลาย Gen Z Note</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt & Kanit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'Kanit', 'Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Kanit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen font-sans selection:bg-emerald-500 selection:text-white">
+
+    <!-- Sticky Glass Top Navigation - Light Mode -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/85 border-b border-slate-200/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+            
+            <!-- Logo / Brand -->
+            <div class="flex items-center gap-3 cursor-pointer" onclick="scrollToTop()">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-500 via-teal-400 to-cyan-500 p-[2px] shadow-md shadow-emerald-500/20">
+                    <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center text-emerald-600 font-bold text-xl">
+                        🧬
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="font-extrabold text-lg tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600">BIO PASS</span>
+                        <span class="px-2 py-0.5 text-[10px] font-bold bg-emerald-100 text-emerald-700 border border-emerald-300 rounded-full uppercase tracking-wider">A-Level Summary</span>
+                    </div>
+                    <p class="text-[11px] text-slate-500 hidden sm:block">สรุปชีวะกระชับ รูปภาพชัดเจน อ่านง่าย สไตล์ Gen Z ⚡</p>
+                </div>
+            </div>
+
+            <!-- Global Search & Navigation Buttons -->
+            <div class="flex-1 max-w-md mx-2">
+                <div class="relative">
+                    <i data-lucide="search" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"></i>
+                    <input type="text" id="searchInput" placeholder="ค้นหาคีย์เวิร์ด (เช่น Action Potential, Auxin, Sarcomere...)" 
+                        class="w-full bg-slate-100/90 border border-slate-200 text-slate-800 text-sm rounded-2xl pl-10 pr-4 py-2 focus:outline-none focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all placeholder:text-slate-400">
+                    <button id="clearSearch" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
+                        <i data-lucide="x" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- View Modes -->
+            <div class="flex items-center gap-2">
+                <button onclick="toggleViewMode('notes')" id="btnViewNotes" class="view-tab-btn active px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-emerald-600 text-white shadow-md shadow-emerald-600/20">
+                    <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+                    <span class="hidden md:inline">เนื้อหา</span>
+                </button>
+                <button onclick="toggleViewMode('flashcards')" id="btnViewFlashcards" class="view-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-all">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-500"></i>
+                    <span class="hidden md:inline">การ์ดจำคีย์เวิร์ด</span>
+                </button>
+                <button onclick="toggleViewMode('quiz')" id="btnViewQuiz" class="view-tab-btn px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-all">
+                    <i data-lucide="brain-circuit" class="w-3.5 h-3.5 text-cyan-600"></i>
+                    <span class="hidden md:inline">เก็งข้อสอบ</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section / Header Summary - Light Theme -->
+    <section class="relative overflow-hidden pt-8 pb-6 bg-white border-b border-slate-200/80">
+        <!-- Ambient Background Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-gradient-to-tr from-emerald-100/60 via-teal-100/60 to-violet-100/60 blur-[100px] pointer-events-none rounded-full"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div>
+                    <div class="flex flex-wrap items-center gap-2 mb-3">
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700 border border-emerald-200 flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                            A-Level Biology 40 ข้อเน้นๆ
+                        </span>
+                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-violet-100 text-violet-700 border border-violet-200">
+                            5 บทหลัก ม.ปลาย
+                        </span>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-2">
+                        สรุปชีววิทยา <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600">ระบบประสาท ต่อมไร้ท่อ การเคลื่อนที่ พืช พฤติกรรม</span>
+                    </h1>
+                    <p class="text-slate-600 text-sm sm:text-base max-w-2xl">
+                        ภาพประกอบเต็มตา ชัดเจน อ่านทบทวนกระชับ พร้อม Active Recall Flashcards สไตล์ Gen Z Clean Light Aesthetic
+                    </p>
+                </div>
+
+                <!-- Overall Progress Card -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-4 min-w-[240px] shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-slate-600">ความคืบหน้าการทบทวน</span>
+                        <span id="progressPercent" class="text-sm font-extrabold text-emerald-600">0%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden mb-3">
+                        <div id="progressBar" class="bg-gradient-to-r from-emerald-500 to-teal-500 h-2.5 rounded-full transition-all duration-500 w-0"></div>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] text-slate-500">
+                        <span id="progressText">0 จาก 15 หัวข้อย่อย</span>
+                        <button onclick="resetProgress()" class="text-xs text-slate-400 hover:text-slate-600 underline">รีเซ็ต</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chapter Navigation Tabs -->
+            <div class="flex items-center gap-2 overflow-x-auto py-4 mt-6 no-scrollbar border-t border-slate-100">
+                <button onclick="filterChapter('all')" class="chapter-tab-btn active px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition-all bg-emerald-600 text-white shadow-md shadow-emerald-600/20">
+                    ✨ ทั้งหมด (40 ข้อ)
+                </button>
+                <button onclick="filterChapter(1)" class="chapter-tab-btn px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    🧠 บทที่ 1: การรับรู้และประสาท (3 ข้อ)
+                </button>
+                <button onclick="filterChapter(2)" class="chapter-tab-btn px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    🧪 บทที่ 2: ต่อมไร้ท่อ (5 ข้อ)
+                </button>
+                <button onclick="filterChapter(3)" class="chapter-tab-btn px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    🦴 บทที่ 3: การเคลื่อนที่ (12 ข้อ ⭐)
+                </button>
+                <button onclick="filterChapter(4)" class="chapter-tab-btn px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    🌱 บทที่ 4: การตอบสนองของพืช (10 ข้อ)
+                </button>
+                <button onclick="filterChapter(5)" class="chapter-tab-btn px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200">
+                    🐾 บทที่ 5: พฤติกรรมของสัตว์ (10 ข้อ)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- VIEW MODE 1: NOTES (Light Bento Grid Style) -->
+        <div id="viewNotes" class="view-content space-y-12">
+            <!-- Dynamic Chapters Container rendered by app.js -->
+        </div>
+
+        <!-- VIEW MODE 2: FLASHCARDS (Active Recall - Light Mode) -->
+        <div id="viewFlashcards" class="view-content hidden">
+            <div class="max-w-2xl mx-auto text-center space-y-6">
+                <div>
+                    <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                        ⚡ Active Recall Flashcards
+                    </span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-2">การ์ดช่วยจำคีย์เวิร์ดออกสอบบ่อย</h2>
+                    <p class="text-slate-500 text-sm">คลิกที่การ์ดเพื่อเฉลยความหมาย / สรุปประเด็นหลัก</p>
+                </div>
+
+                <!-- Flashcard Controls -->
+                <div class="flex items-center justify-between text-xs text-slate-500 px-4">
+                    <span id="flashcardCounter" class="font-bold">1 / 15</span>
+                    <div class="flex gap-2">
+                        <select id="flashcardCategory" onchange="filterFlashcards(this.value)" class="bg-white border border-slate-200 text-slate-700 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-emerald-500/20">
+                            <option value="all">ทุกบท</option>
+                            <option value="1">บทที่ 1: ระบบประสาท</option>
+                            <option value="2">บทที่ 2: ต่อมไร้ท่อ</option>
+                            <option value="3">บทที่ 3: การเคลื่อนที่</option>
+                            <option value="4">บทที่ 4: ตอบสนองพืช</option>
+                            <option value="5">บทที่ 5: พฤติกรรมสัตว์</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- The Flip Card Container -->
+                <div class="perspective-1000 min-h-[320px]">
+                    <div id="flashcard" onclick="flipCard()" class="card-inner cursor-pointer relative w-full h-[320px] rounded-3xl border border-slate-200 bg-white p-8 shadow-md hover:shadow-lg flex flex-col justify-between transition-transform duration-500">
+                        <!-- Front Face -->
+                        <div class="card-front flex flex-col justify-between h-full">
+                            <div class="flex justify-between items-start">
+                                <span id="fcTag" class="px-3 py-1 rounded-xl text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                                    Action Potential
+                                </span>
+                                <span class="text-slate-400 text-xs flex items-center gap-1 font-medium">
+                                    <i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> แตะเพื่อพลิก
+                                </span>
+                            </div>
+                            <div class="my-auto py-6">
+                                <h3 id="fcQuestion" class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-relaxed">
+                                     Resting State ของเซลล์ประสาทมีค่าศักย์ไฟฟ้าเท่าใด และรักษาสภาพด้วยกลไกใด?
+                                </h3>
+                            </div>
+                            <div class="text-xs text-slate-400">
+                                💡 Tip: ลองนึกคำตอบในใจก่อนแตะดูเฉลย
+                            </div>
+                        </div>
+                        
+                        <!-- Back Face -->
+                        <div class="card-back absolute inset-0 rounded-3xl bg-slate-900 text-white p-8 shadow-xl flex flex-col justify-between text-left h-full">
+                            <div class="flex justify-between items-start">
+                                <span class="px-3 py-1 rounded-xl text-[11px] font-bold bg-emerald-400 text-slate-950">
+                                    เฉลย & สรุปสาระสำคัญ
+                                </span>
+                                <span class="text-slate-300 text-xs flex items-center gap-1 font-medium">
+                                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400"></i> ได้คำตอบไหม?
+                                </span>
+                            </div>
+                            <div class="my-auto py-4 space-y-2">
+                                <p id="fcAnswer" class="text-base text-slate-100 leading-relaxed font-medium">
+                                    -70 mV โดยอาศัย Na⁺/K⁺ pump (สูบ 3Na⁺ ออก, 2K⁺ เข้า) ร่วมกับ K⁺ leak channel
+                                </p>
+                                <div id="fcNote" class="text-xs text-emerald-300 bg-emerald-950/80 border border-emerald-700/50 p-3 rounded-xl mt-3">
+                                    📌 ข้อสอบชอบลวง: Na+/K+ pump ใช้ ATP (Active Transport)
+                                </div>
+                            </div>
+                            <div class="flex justify-between text-xs text-slate-400 border-t border-slate-800 pt-3">
+                                <span>แตะอีกครั้งเพื่อกลับไปที่คำถาม</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex items-center justify-center gap-4">
+                    <button onclick="prevFlashcard()" class="px-5 py-3 rounded-2xl bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 font-bold flex items-center gap-2 shadow-sm">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i> ข้อก่อนหน้า
+                    </button>
+                    <button onclick="nextFlashcard()" class="px-7 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold flex items-center gap-2 shadow-md shadow-emerald-600/20">
+                        ข้อถัดไป <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW MODE 3: QUIZ (Practice Test - Light Mode) -->
+        <div id="viewQuiz" class="view-content hidden max-w-3xl mx-auto space-y-8">
+            <div class="text-center space-y-2">
+                <span class="px-3 py-1 rounded-full text-xs font-bold bg-cyan-100 text-cyan-800 border border-cyan-200">
+                    🎯 Practice Test
+                </span>
+                <h2 class="text-2xl font-bold text-slate-900">ทดสอบความพร้อมจับจุดข้อสอบ</h2>
+                <p class="text-slate-500 text-sm">ทดลองทำข้อสอบประยุกต์ 5 ข้อ พร้อมคำอธิบายละเอียด</p>
+            </div>
+
+            <div id="quizContainer" class="space-y-6">
+                <!-- Quiz Cards rendered dynamically -->
+            </div>
+
+            <!-- Quiz Submit / Score Summary -->
+            <div class="bg-white border border-slate-200 rounded-3xl p-6 text-center shadow-md space-y-4">
+                <button onclick="checkQuizAnswers()" class="px-8 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-600 to-emerald-600 hover:from-cyan-500 hover:to-emerald-500 text-white font-extrabold text-base shadow-lg shadow-emerald-600/20 transition-all">
+                    ตรวจคำตอบและดูคะแนน 🚀
+                </button>
+                <div id="quizScoreResult" class="hidden text-xl font-bold text-emerald-700 mt-4 animate-fade-in"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- IMAGE MODAL VIEWER (Keep for extra zoom) -->
+    <div id="imageModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="relative max-w-5xl w-full bg-white border border-slate-200 rounded-3xl p-4 sm:p-6 overflow-hidden shadow-2xl flex flex-col max-h-[92vh]">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-3 mb-4">
+                <h3 id="modalTitle" class="text-base font-bold text-slate-900 flex items-center gap-2">
+                    <i data-lucide="image" class="w-5 h-5 text-emerald-600"></i> แผนภาพประกอบภาพขยายเต็มตา
+                </h3>
+                <button onclick="closeImageModal()" class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200 flex items-center justify-center transition-all">
+                    <i data-lucide="x" class="w-4 h-4"></i>
+                </button>
+            </div>
+            <div class="flex-1 overflow-auto flex items-center justify-center p-3 bg-slate-50 rounded-2xl border border-slate-200">
+                <img id="modalImage" src="" alt="Diagram" class="max-h-[75vh] w-full object-contain rounded-xl">
+            </div>
+            <p id="modalCaption" class="text-xs text-slate-600 text-center font-medium mt-3"></p>
+        </div>
+    </div>
+
+    <!-- Quick Back To Top Floating Button -->
+    <button onclick="scrollToTop()" id="btnBackToTop" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-2xl bg-emerald-600 text-white font-bold shadow-lg shadow-emerald-600/30 flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none hover:scale-105">
+        <i data-lucide="arrow-up" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white py-8 mt-16 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-bold text-slate-700">BIO PASS ⚡ สรุปชีววิทยาสำหรับการสอบ A-Level / TPAT3</p>
+            <p class="mt-1 text-slate-500">Gen Z Minimal Light UX/UI • รูปภาพเต็มตา อ่านง่าย ครอบคลุม 5 บทสำคัญ</p>
+        </div>
+    </footer>
+
+    <!-- App JS Engine -->
+    <script src="assets/js/app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
