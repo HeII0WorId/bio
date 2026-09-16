@@ -12,10 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- KaTeX for math formulas -->
+    
+    <!-- KaTeX CDN with Auto-Render -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <script>
@@ -208,6 +210,11 @@
                         </div>
 
                         <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-xl">
+                            <b class="text-rose-800">ผลต่าง (Difference):</b>
+                            $$P(A - B) = P(A) - P(A \cap B)$$
+                        </div>
+
+                        <div class="p-2.5 bg-slate-50 border border-slate-200 rounded-xl">
                             <b class="text-rose-800">เหตุการณ์เป็นอิสระต่อกัน (Independent):</b>
                             $$P(A \cap B) = P(A) \times P(B)$$
                         </div>
@@ -277,7 +284,7 @@
                             $$\text{วิธีทั้งหมด} = \frac{\binom{9}{3} \binom{6}{3} \binom{3}{3}}{3!} = \frac{84 \times 20 \times 1}{6} = 280 \text{ วิธี}$$
                             <p>• <b>วิธีที่อาจารย์ 3 คนอยู่กลุ่มเดียวกัน:</b> ให้อาจารย์ 3 คนอยู่กลุ่มแรก แล้วนำนักเรียน 6 คนมาแบ่งเป็น 2 กลุ่ม กลุ่มละ 3 คน (หาร $2!$)</p>
                             $$\text{วิธีที่อาจารย์อยู่กลุ่มเดียวกัน} = \frac{\binom{6}{3} \binom{3}{3}}{2!} = \frac{20 \times 1}{2} = 10 \text{ วิธี}$$
-                            <p>• <b>คำนวณตามเงื่อนไข:</b> $280 - 10 = 270 \text{ วิธี}$</p>
+                            <p>• <b>คำนวณตามเงื่อนไข:</b> $280 - 10 = 270$ วิธี</p>
                             <div class="p-2.5 bg-emerald-50 border border-emerald-200 rounded-xl font-bold text-emerald-800">
                                 ตอบ: 270 วิธี
                             </div>
@@ -427,14 +434,14 @@
                             <p><b>วิธีทำ:</b></p>
                             <p>ให้ $x_1 + x_2 + x_3 = 12$ โดย $1 \le x_i \le 6$</p>
                             <p>1. แจกให้ทุกคนก่อนคนละ 1 ลูก: $y_1 + y_2 + y_3 = 9$ โดย $0 \le y_i \le 5$</p>
-                            <p>2. วิธีทั้งหมด (ยังไม่คิดเพดาน): $\binom{9 + 3 - 1}{3 - 1} = \binom{11}{2} = 55 \text{ วิธี}$</p>
+                            <p>2. วิธีทั้งหมด (ยังไม่คิดเพดาน): $\binom{9 + 3 - 1}{3 - 1} = \binom{11}{2} = 55$ วิธี</p>
                             <p>3. หักกรณีที่มีคนได้ $y_i \ge 6$ (ได้ลูกแก้วเกิน 6 ลูก):</p>
                             <ul class="list-disc list-inside space-y-1 pl-2 text-slate-600">
                                 <li>เลือก 1 คนที่จะได้เกิน $\implies \binom{3}{1} = 3$ วิธี</li>
                                 <li>ให้คนนั้นไปก่อน 6 ลูก เหลือแจกอีก 3 ลูกให้ 3 คน $\implies \binom{3 + 3 - 1}{3 - 1} = \binom{5}{2} = 10$ วิธี</li>
                                 <li>รวมกรณีเกิน = $3 \times 10 = 30$ วิธี</li>
                             </ul>
-                            <p>4. จำนวนวิธีสุทธิ: $55 - 30 = 25 \text{ วิธี}$</p>
+                            <p>4. จำนวนวิธีสุทธิ: $55 - 30 = 25$ วิธี</p>
                             <div class="p-2.5 bg-emerald-50 border border-emerald-200 rounded-xl font-bold text-emerald-800">
                                 ตอบ: 25 วิธี
                             </div>
@@ -526,8 +533,21 @@
         </div>
     </footer>
 
+    <!-- Script to Auto-Render KaTeX Math safely -->
     <script>
-        lucide.createIcons();
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"],
+                throwOnError: false
+            });
+            lucide.createIcons();
+        });
     </script>
 </body>
 </html>
