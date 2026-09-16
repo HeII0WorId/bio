@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>STUDY PASS ⚡ | สังคมศึกษา ม.6 ปลายภาค & A-Level (ฉบับเจาะลึก)</title>
+    <title>STUDY PASS ⚡ | สังคมศึกษา ม.6 & A-Level</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Prompt & Kanit & Plus Jakarta Sans -->
@@ -27,42 +27,42 @@
         }
     </script>
 </head>
-<body class="bg-[#fcfcfd] text-slate-900 min-h-screen font-sans selection:bg-indigo-500 selection:text-white pb-24 md:pb-8 overflow-x-hidden flex flex-col justify-between antialiased">
+<body class="bg-[#fcfcfd] text-slate-900 min-h-screen font-sans selection:bg-indigo-500 selection:text-white pb-20 md:pb-8 overflow-x-hidden flex flex-col justify-between antialiased">
 
-    <!-- Sticky Glass Top Navigation Bar -->
+    <!-- Sticky Navigation Bar -->
     <header class="sticky top-0 z-40 backdrop-blur-md bg-white/90 border-b border-slate-200/80 transition-all">
-        <div class="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
-            <div class="h-14 sm:h-16 flex items-center justify-between gap-2 sm:gap-4">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="h-16 flex items-center justify-between gap-4">
                 
                 <!-- Breadcrumb Brand -->
-                <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+                <div class="flex items-center gap-2">
                     <a href="index.html" class="text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors flex items-center gap-1">
                         <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
-                        <span class="hidden sm:inline">หน้าหลัก</span>
+                        <span>หน้าหลัก</span>
                     </a>
                     <span class="text-slate-300 text-xs">/</span>
-                    <a href="social.html" class="font-extrabold text-sm sm:text-lg tracking-tight text-slate-900 flex items-center gap-1">
+                    <a href="social.html" class="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 flex items-center gap-1.5">
                         <span>STUDY PASS</span>
-                        <span class="px-1.5 py-0.5 rounded-md text-[9px] sm:text-[10px] font-bold bg-indigo-100 text-indigo-800 border border-indigo-200">สังคม</span>
+                        <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-100 text-indigo-800 border border-indigo-200">สังคมศึกษา</span>
                     </a>
                 </div>
 
-                <!-- Desktop Nav Links & View Modes -->
-                <div class="flex items-center gap-1.5 sm:gap-2">
+                <!-- Nav Links & Mode Switchers -->
+                <div class="flex items-center gap-2">
                     <nav class="hidden md:flex items-center gap-1 mr-2 border-r border-slate-200 pr-3">
                         <a href="biology.html" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all">ชีววิทยา</a>
                         <a href="math.html" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all">คณิตศาสตร์</a>
                         <a href="social.html" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-indigo-50 text-indigo-800 border border-indigo-200">สังคมศึกษา</a>
                     </nav>
 
-                    <!-- View Mode Switchers -->
-                    <div class="flex items-center gap-1 sm:gap-1.5">
-                        <button onclick="toggleSocialView('notes')" id="btnSocialNotes" class="social-tab-btn active px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-white shadow-xs flex items-center gap-1">
+                    <!-- Desktop View Mode Buttons -->
+                    <div class="hidden md:flex items-center gap-1.5">
+                        <button onclick="toggleSocialView('notes')" id="btnSocialNotes" class="social-tab-btn active px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-slate-900 text-white shadow-xs">
                             <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
                             <span>เนื้อหา</span>
                         </button>
-                        <button onclick="toggleSocialView('flashcards')" id="btnSocialCards" class="social-tab-btn px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-xl text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-all flex items-center gap-1">
-                            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-500"></i>
+                        <button onclick="toggleSocialView('flashcards')" id="btnSocialCards" class="social-tab-btn px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 transition-all">
+                            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-indigo-500"></i>
                             <span>Flashcards</span>
                         </button>
                     </div>
@@ -71,34 +71,34 @@
         </div>
     </header>
 
-    <!-- Page Header Section -->
-    <section class="bg-white border-b border-slate-200/80 py-5 sm:py-10">
-        <div class="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
-            <div class="space-y-2.5 sm:space-y-3">
-                <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                    <span class="px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-bold bg-slate-100 text-slate-700 border border-slate-200">
-                        SOCIAL STUDIES
+    <!-- Page Header & Topic Bar -->
+    <section class="bg-white border-b border-slate-200/80 py-8 sm:py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-3">
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-slate-100 text-slate-700 border border-slate-200">
+                        SOCIAL STUDIES A-LEVEL
                     </span>
-                    <span class="px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-bold bg-indigo-100 text-indigo-800 border border-indigo-200">
-                        สรุปเจาะลึก วศม6 ปลายภาค
+                    <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-indigo-100 text-indigo-800 border border-indigo-200">
+                        ม.6 สังคมศึกษา (บทที่ 4 & 5)
                     </span>
                 </div>
-                <h1 class="text-xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                    สรุปเนื้อหาวิชาสังคมศึกษา ม.6 (บทที่ 4 & บทที่ 5)
+                <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    สรุปสังคมศึกษา ม.6 & A-Level (ฉบับเจาะลึก)
                 </h1>
-                <p class="text-slate-600 text-xs sm:text-sm max-w-3xl leading-relaxed">
+                <p class="text-slate-600 text-xs sm:text-sm max-w-2xl leading-relaxed">
                     สรุปเจาะลึกเนื้อหาจาก "ชีทสรุปวศม6 ปลายภาค.pdf" ครบถ้วนทุกประเด็น: ความขัดแย้งสากล สงครามโลก สงครามเย็น ตะวันออกกลาง องค์กรสากล และพัฒนาการอารยธรรมตะวันออก
                 </p>
 
-                <!-- Mobile Responsive Chapter Filter Bar -->
-                <div class="flex items-center gap-1.5 overflow-x-auto pt-2.5 sm:pt-3 border-t border-slate-100 no-scrollbar touch-pan-x">
-                    <button onclick="filterSocialChapter('all')" class="soc-chap-btn active px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all bg-slate-900 text-white shadow-xs shrink-0">
+                <!-- Chapter Navigation Tabs -->
+                <div class="flex items-center gap-1.5 overflow-x-auto py-3 mt-6 border-t border-slate-100 no-scrollbar touch-pan-x">
+                    <button onclick="filterSocialChapter('all')" class="soc-chap-btn active px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all bg-slate-900 text-white shadow-xs shrink-0">
                         ✨ ทั้งหมด (บทที่ 4 & 5)
                     </button>
-                    <button onclick="filterSocialChapter(4)" class="soc-chap-btn px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 shrink-0">
+                    <button onclick="filterSocialChapter(4)" class="soc-chap-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 shrink-0">
                         🌍 บทที่ 4: ความขัดแย้ง & ความร่วมมือ
                     </button>
-                    <button onclick="filterSocialChapter(5)" class="soc-chap-btn px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 shrink-0">
+                    <button onclick="filterSocialChapter(5)" class="soc-chap-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all bg-slate-100 text-slate-700 hover:bg-slate-200 shrink-0">
                         ⛩️ บทที่ 5: อารยธรรมตะวันออก
                     </button>
                 </div>
@@ -107,32 +107,32 @@
     </section>
 
     <!-- Main Content Container -->
-    <main class="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-5 sm:py-8 flex-1">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1">
 
         <!-- VIEW MODE 1: NOTES -->
-        <div id="socialNotesView" class="space-y-8 sm:space-y-12">
+        <div id="socialNotesView" class="space-y-10">
 
             <!-- CHAPTER 4 -->
-            <div id="socChap4" class="space-y-6 sm:space-y-8">
-                <div class="border-b border-slate-200 pb-2.5 sm:pb-3 flex items-center justify-between">
-                    <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
+            <div id="socChap4" class="space-y-6">
+                <div class="border-b border-slate-200 pb-3 flex items-center justify-between">
+                    <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
                         <i data-lucide="globe" class="w-4 h-4 text-indigo-600"></i>
                         <span>บทที่ 4: ความขัดแย้งและความร่วมมือระหว่างประเทศ</span>
                     </h2>
-                    <span class="text-xs font-semibold text-slate-500 hidden sm:inline">ม.6 ปลายภาค</span>
+                    <span class="text-xs font-semibold text-slate-500">ม.6 / A-Level</span>
                 </div>
 
                 <!-- 4.1 State Interests & Causes -->
-                <div class="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 space-y-4 shadow-2xs">
-                    <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                <div class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-4 shadow-2xs">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                         <span class="text-xs sm:text-sm font-extrabold text-slate-900">1. ผลประโยชน์ของรัฐ และสาเหตุความขัดแย้ง</span>
-                        <span class="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">State Interests</span>
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">State Interests</span>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 text-xs text-slate-700">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-xs text-slate-700">
                         <!-- Left Block: 6 State Interests -->
                         <div class="space-y-3">
-                            <div class="p-3 sm:p-3.5 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-2">
+                            <div class="p-3.5 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-2">
                                 <b class="text-indigo-900 font-bold block text-xs sm:text-sm">🎯 องค์ประกอบผลประโยชน์ของชาติ (6 ประการ):</b>
                                 <ul class="grid grid-cols-2 gap-1.5 text-slate-700 text-[11px] font-medium">
                                     <li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span> 1. ความอยู่รอดของชาติ</li>
@@ -144,7 +144,7 @@
                                 </ul>
                             </div>
 
-                            <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">💰 สาเหตุทางเศรษฐกิจ:</b>
                                 <p class="text-slate-600 leading-relaxed">
                                     เกิดจากความไม่เท่าเทียมทางทรัพยากร <b class="text-indigo-900">เลนิน (Lenin)</b> เชื่อว่าเป็นสาเหตุสำคัญที่สุด <br>
@@ -155,14 +155,14 @@
 
                         <!-- Right Block: Political, Social & Cultural Causes -->
                         <div class="space-y-3">
-                            <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">🏛️ สาเหตุทางการเมือง (อุดมการณ์ต่างกัน):</b>
                                 <p class="text-slate-600 leading-relaxed">
                                     เสรีประชาธิปไตย vs คอมมิวนิสต์ ในยุคสงครามเย็น นำไปสู่ <b class="text-indigo-900">สงครามตัวแทน (Proxy Wars)</b> เช่น สงครามเกาหลี, สงครามเวียดนาม, นิการากัว, ปฏิวัติคิวบา และการยึดอำนาจของนายพลปิโนเชต์ในชิเล
                                 </p>
                             </div>
 
-                            <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1.5">
+                            <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1.5">
                                 <b class="text-slate-900 font-bold block">🕊️ สาเหตุทางสังคม วัฒนธรรม เชื้อชาติ & ศาสนา:</b>
                                 <div class="space-y-1 text-[11px] text-slate-600 leading-relaxed">
                                     <p>• <b>ศาสนา:</b> สงครามครูเสด, เลบานอน (มุสลิม vs คริสต์), ซิกข์-ฮินดูในอินเดีย, โปรเตสแตนต์-คาทอลิกในไอร์แลนด์เหนือ, อิรัก-อิหร่าน (ต่างนิกาย)</p>
@@ -174,16 +174,16 @@
                 </div>
 
                 <!-- 4.2 Methods of Resolving Conflict -->
-                <div class="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 space-y-4 shadow-2xs">
-                    <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                <div class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-4 shadow-2xs">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                         <span class="text-xs sm:text-sm font-extrabold text-slate-900">2. วิธีการแก้ไขความขัดแย้งระหว่างประเทศ</span>
-                        <span class="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">Resolution</span>
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">Resolution</span>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 text-xs text-slate-700">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-xs text-slate-700">
                         <!-- Peaceful Means -->
                         <div class="space-y-3">
-                            <div class="p-3 sm:p-3.5 bg-emerald-50/80 border border-emerald-200/80 rounded-xl space-y-1.5">
+                            <div class="p-3.5 bg-emerald-50/80 border border-emerald-200/80 rounded-xl space-y-1.5">
                                 <b class="text-emerald-900 font-bold block text-xs sm:text-sm">🕊️ 1) สันติวิธี (Peaceful Means):</b>
                                 <div class="space-y-1 text-slate-700 text-[11px] leading-relaxed">
                                     <p>• <b>ทางการทูต/การเมือง:</b> เจรจาตรง, ใช้คนกลาง (Good Offices), ไกล่เกลี่ย (Mediation), สืบสวนข้อเท็จจริง, ประนีประนอม</p>
@@ -193,13 +193,13 @@
                                 </div>
                             </div>
 
-                            <div class="p-3 sm:p-3.5 bg-amber-50/80 border border-amber-200/80 rounded-xl space-y-1">
+                            <div class="p-3.5 bg-amber-50/80 border border-amber-200/80 rounded-xl space-y-1">
                                 <b class="text-amber-900 font-bold block text-xs sm:text-sm">⚠️ 2) วิธีการบีบบังคับ (Coercive Means - ไม่ใช้กำลัง):</b>
                                 <div class="space-y-1.5 text-slate-800 text-[11px]">
-                                    <div class="p-2 bg-white/90 rounded-lg border border-amber-200/60">
+                                    <div class="p-2.5 bg-white/90 rounded-lg border border-amber-200/60">
                                         <b class="text-amber-900">รีทอร์ชัน (Retortion):</b> ตอบโต้แบบ <b class="text-emerald-700">ถูกต้องตามกฎหมาย</b> เช่น ตัดความสัมพันธ์ทางการทูต, ยกเลิกสิทธิพิเศษภาษี
                                     </div>
-                                    <div class="p-2 bg-white/90 rounded-lg border border-amber-200/60">
+                                    <div class="p-2.5 bg-white/90 rounded-lg border border-amber-200/60">
                                         <b class="text-rose-900">รีไพรซอล (Reprisal):</b> ตอบโต้แบบ <b class="text-rose-700">ขัดกฎหมาย</b> เพื่อให้อีกฝ่ายยอมตกลง เช่น ยึดทรัพย์สิน, บอยคอตสินค้า, เอมบาร์โก (Embargo ห้ามเรือเข้า-ออก), ปิดล้อมทางทะเล, แทรกแซง
                                     </div>
                                 </div>
@@ -208,14 +208,14 @@
 
                         <!-- Force Means -->
                         <div class="space-y-3">
-                            <div class="p-3 sm:p-3.5 bg-rose-50/80 border border-rose-200/80 rounded-xl space-y-2">
+                            <div class="p-3.5 bg-rose-50/80 border border-rose-200/80 rounded-xl space-y-2">
                                 <b class="text-rose-900 font-bold block text-xs sm:text-sm">💥 3) วิธีการใช้กำลัง (Use of Force):</b>
                                 <div class="space-y-2 text-slate-800 text-[11px]">
-                                    <div class="p-2.5 bg-white/90 rounded-lg border border-rose-200/60 space-y-0.5">
+                                    <div class="p-3 bg-white/90 rounded-lg border border-rose-200/60 space-y-0.5">
                                         <b class="text-slate-900 block font-bold">• สงครามจำกัดขอบเขต (Limited War):</b>
                                         <p class="text-slate-600">จำกัดขอบเขตการรบ มุ่งเกิดความเสียน้อยที่สุด เพื่อให้อีกฝ่ายยอมเจรจา (เช่น <b class="text-slate-900">สงครามจีน-เวียดนาม ค.ศ. 1979</b>)</p>
                                     </div>
-                                    <div class="p-2.5 bg-white/90 rounded-lg border border-rose-200/60 space-y-0.5">
+                                    <div class="p-3 bg-white/90 rounded-lg border border-rose-200/60 space-y-0.5">
                                         <b class="text-slate-900 block font-bold">• สงครามเบ็ดเสร็จ (Total War):</b>
                                         <p class="text-slate-600">ไร้ขอบเขต มุ่งทำลายล้างอีกฝ่ายสิ้นเชิง ระดมทรัพยากรทั้งหมด (เช่น สงครามนโปเลียน, สงครามโลกครั้งที่ 1 และ 2)</p>
                                     </div>
@@ -226,34 +226,34 @@
                 </div>
 
                 <!-- 4.3 World War I & II Detailed Breakdown -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <!-- World War I -->
-                    <div class="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 space-y-3.5 shadow-2xs">
-                        <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                    <div class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-3.5 shadow-2xs">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                             <span class="text-xs sm:text-sm font-extrabold text-slate-900">3. สงครามโลกครั้งที่ 1 (ค.ศ. 1914 – 1918)</span>
-                            <span class="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">WWI</span>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">WWI</span>
                         </div>
 
                         <div class="space-y-2.5 text-xs text-slate-700">
-                            <div class="p-2.5 sm:p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">⚔️ พันธมิตรยุโรปยุคแรก:</b>
                                 <p class="text-slate-600">• <b>ไตรพันธมิตร:</b> เยอรมนี, ออสเตรีย-ฮังการี, อิตาลี<br>
                                 • <b>ข้อตกลงไตรภาคี:</b> ฝรั่งเศส, อังกฤษ, โซเวียต</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-rose-50/70 border border-rose-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-rose-50/70 border border-rose-200/80 rounded-xl space-y-1">
                                 <b class="text-rose-900 font-bold block">💣 ชนวนเหตุสำคัญ:</b>
                                 <p class="text-slate-700">ลอบปลงพระชนม์ <b class="text-rose-900">อาร์ชดยุค ฟรานซิส เฟอร์ดินานด์</b> มกุฎราชกุมารออสเตรีย-ฮังการี ที่เมืองซาราเจโว</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">🛡️ คู่สงครามจริง:</b>
                                 <p class="text-slate-600">• <b>มหาอำนาจกลาง:</b> ออสเตรีย-ฮังการี, เยอรมนี, ตุรกี, บัลแกเรีย<br>
                                 • <b>สัมพันธมิตร:</b> 23 ประเทศ (รวมสหรัฐฯ)</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
                                 <b class="text-indigo-900 font-bold block">📜 ผลลัพธ์ & สนธิสัญญา:</b>
                                 <p class="text-slate-700 leading-relaxed">• วิลสัน ประกาศ <b class="text-indigo-900">คำแถลง 14 ประการ (Fourteen Points)</b> สิทธิปกครองตนเอง เสนอตั้ง <b class="text-indigo-900">องค์การสันนิบาตชาติ</b> พัฒนาเป็น <b class="text-indigo-900">สนธิสัญญาแวร์ซาย</b><br>
                                 • จักรวรรดิเยอรมนี ออสเตรีย-ฮังการี ตุรกี ล่มสลาย / สหรัฐฯ & ญี่ปุ่นกลายเป็นมหาอำนาจใหม่ / ทหารเสียชีวิต ~13 ล้านคน</p>
@@ -262,32 +262,32 @@
                     </div>
 
                     <!-- World War II -->
-                    <div class="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 space-y-3.5 shadow-2xs">
-                        <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                    <div class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-3.5 shadow-2xs">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                             <span class="text-xs sm:text-sm font-extrabold text-slate-900">4. สงครามโลกครั้งที่ 2 (ค.ศ. 1939 – 1945)</span>
-                            <span class="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">WWII</span>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">WWII</span>
                         </div>
 
                         <div class="space-y-2.5 text-xs text-slate-700">
-                            <div class="p-2.5 sm:p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">🔥 สาเหตุหลัก:</b>
                                 <p class="text-slate-600">• ความไม่ยุติธรรมสนธิสัญญาแวร์ซาย (ฮิตเลอร์เยอรมนี, มุสโสลินีอิตาลีชูฟาสซิสม์, ญี่ปุ่นชูวงศไพบูลย์มหาเอเชียบูรพา)<br>
                                 • จักรวรรดินิยม (ญี่ปุ่นยึดแมนจูเรีย 1931, อิตาลียึดเอธิโอเปีย 1935, เยอรมนีผนวกออสเตรีย/เชกโกฯ)<br>
                                 • ความอ่อนแอของสันนิบาตชาติ</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-rose-50/70 border border-rose-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-rose-50/70 border border-rose-200/80 rounded-xl space-y-1">
                                 <b class="text-rose-900 font-bold block">⚡ ชนวนเหตุ 2 แนวรบ:</b>
                                 <p class="text-slate-700">• <b>แนวรบตะวันตก:</b> เยอรมนีรุกรานโปแลนด์ (1 ก.ย. 1939)<br>
                                 • <b>แนวรบแปซิฟิก:</b> ญี่ปุ่นโจมตีอ่าวเพิร์ล (7 ธ.ค. 1941)</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">💥 ฉากจบ & การยอมแพ้:</b>
                                 <p class="text-slate-600">เยอรมนียอมแพ้ 7 พ.ค. 1945 / สหรัฐฯ ทิ้งปรมาณูฮิโรชิมา (6 ส.ค.) และนางาซากิ (9 ส.ค.) ญี่ปุ่นยอมแพ้ 14 ส.ค. 1945</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
                                 <b class="text-indigo-900 font-bold block">🏳️ ผลลัพธ์หลังสงคราม:</b>
                                 <p class="text-slate-700 leading-relaxed">• <b>อิตาลี:</b> เสียอาณานิคม จ่ายค่าปฏิกรรม 360 ล้านดอลลาร์<br>
                                 • <b>เยอรมนี:</b> (ข้อตกลงปอตสดัม) ถูกแบ่งเป็น 4 ส่วนดูแลโดย โซเวียต อังกฤษ สหรัฐฯ ฝรั่งเศส<br>
@@ -299,35 +299,35 @@
                 </div>
 
                 <!-- 4.4 Cold War & Middle East Breakdown -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <!-- Cold War -->
-                    <div class="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 space-y-3.5 shadow-2xs">
-                        <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                    <div class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-3.5 shadow-2xs">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                             <span class="text-xs sm:text-sm font-extrabold text-slate-900">5. สงครามเย็นและการสิ้นสุด (Cold War)</span>
-                            <span class="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">1947-1991</span>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">1947-1991</span>
                         </div>
 
                         <div class="space-y-2.5 text-xs text-slate-700">
-                            <div class="p-2.5 sm:p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">🌐 ระบบดุลอำนาจสองขั้ว (Bi-Polar):</b>
                                 <p class="text-slate-600">สหรัฐอเมริกา (เสรี) vs สหภาพโซเวียต (คอมมิวนิสต์) แข่งขันอวกาศ นิวเคลียร์ และสงครามตัวแทน</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
                                 <b class="text-indigo-900 font-bold block">📜 นโยบายสำคัญ:</b>
                                 <p class="text-slate-700">• <b>หลักการทรูแมน (1947):</b> สหรัฐฯ ช่วยประเทศที่ถูกคุกคามจากคอมมิวนิสต์<br>
                                 • <b>แผนการมาร์แชล:</b> สหรัฐฯ ช่วยฟื้นฟูเศรษฐกิจยุโรปตะวันตก<br>
                                 • <b>ความมั่นคง:</b> NATO (ฝั่งเสรี) vs Warsaw Pact (ฝั่งโซเวียต)</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">⚔️ สงครามตัวแทน (Proxy Wars):</b>
                                 <p class="text-slate-600">• <b>สงครามเกาหลี (1950-1953):</b> แบ่งที่ <b class="text-slate-900">เส้นขนาน 38</b> จบด้วยสัญญายุติสงคราม 1953<br>
                                 • <b>สงครามเวียดนาม (1965-1975):</b> หลังเดียนเบียนฟู แบ่งที่ <b class="text-slate-900">เส้นขนาน 17</b> สหรัฐฯ ถอนทหารเจรจาปารีส (1973) คอมมิวนิสต์ยึดไซ่ง่อนได้ 30 เม.ย. 1976</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-emerald-50/70 border border-emerald-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-emerald-50/70 border border-emerald-200/80 rounded-xl space-y-1">
                                 <b class="text-emerald-900 font-bold block">🧊 การสิ้นสุดสงครามเย็น:</b>
                                 <p class="text-slate-700 leading-relaxed">• นิกสันเยือนจีนพบเหมาเจ๋อตง (1975) / โซเวียตบุกอัฟกานิสถาน (1979)<br>
                                 • <b class="text-emerald-900">มิคาอิล กอร์บาชอฟ (1985):</b> ชูนโยบาย <b class="text-emerald-900">เปเรสตรอยกา (Perestroika - ปฏิรูป)</b> และ <b class="text-emerald-900">กลาสนอสต์ (Glasnost - เปิดกว้าง)</b> ทลายกำแพงเบอร์ลิน<br>
@@ -337,19 +337,19 @@
                     </div>
 
                     <!-- Middle East Conflict -->
-                    <div class="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 space-y-3.5 shadow-2xs">
-                        <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                    <div class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-3.5 shadow-2xs">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                             <span class="text-xs sm:text-sm font-extrabold text-slate-900">6. ปัญหาตะวันออกกลางและเหตุการณ์สำคัญ</span>
-                            <span class="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">Middle East</span>
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">Middle East</span>
                         </div>
 
                         <div class="space-y-2.5 text-xs text-slate-700">
-                            <div class="p-2.5 sm:p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">🕌 อาหรับ-อิสราเอล & ไซออนนิสต์:</b>
                                 <p class="text-slate-600">ปาเลสไตน์เป็น "ดินแดนแห่งพันธสัญญา" ศตวรรษที่ 19 เกิด <b>องค์การไซออนนิสต์ (Zionism)</b> ผลักดันยิวกลับปาเลสไตน์ / 1947 UN แบ่งดินแดน -> เดวิด แบนกูเรียน ประกาศตั้งประเทศอิสราเอล</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">⚔️ สงครามสำคัญในตะวันออกกลาง:</b>
                                 <p class="text-slate-600">• <b>1948 (สงครามปาเลสไตน์):</b> อิสราเอลชนะ ยึดเยรูซาเล็ม<br>
                                 • <b>1956 (วิกฤตคลองสุเอซ):</b> อิสราเอลยึดฉนวนกาซา & ไซนาย<br>
@@ -358,14 +358,14 @@
                                 • <b>ข้อตกลงวอชิงตัน (1993):</b> ยอมให้ PLO ปกครองตนเองในกาซา & เจริโค</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">💣 อิรัก-อิหร่าน, อ่าวเปอร์เซีย & 9/11:</b>
                                 <p class="text-slate-600">• <b>สงครามอิรัก-อิหร่าน (1980):</b> แย่งชัต อัล-อาหรับ (ซัดดัม สุหนี่ vs โคไมนี่ ชีอะฮ์)<br>
                                 • <b>สงครามอ่าวเปอร์เซีย (1990):</b> อิรักบุกคูเวต -> UN ขับไล่อิรัก<br>
                                 • <b>9/11 (2001):</b> อัลเคดา (บิน ลาเดน) จี้เครื่องบินชนเวิลด์เทรด -> สหรัฐฯ บุกโค่นตาลิบันอัฟกานิสถาน & ซัดดัม อิรัก</p>
                             </div>
 
-                            <div class="p-2.5 sm:p-3 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
+                            <div class="p-3 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
                                 <b class="text-indigo-900 font-bold block">🌺 Arab Spring (เริ่ม ธ.ค. 2553):</b>
                                 <p class="text-slate-700">ปฏิวัติประชาธิปไตย เริ่มจาก <b class="text-indigo-900">การปฏิวัติดอกมะลิ</b> ในตูนิเซีย ขยายไปอียิปต์ (โค่นมูบารัค), ลิเบีย (โค่นกัดดาฟี), บาห์เรน, ซีเรีย, เยเมน</p>
                             </div>
@@ -375,26 +375,26 @@
                 </div>
 
                 <!-- 4.5 International Organizations & Law -->
-                <div class="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 space-y-4 shadow-2xs">
-                    <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                <div class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-4 shadow-2xs">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                         <span class="text-xs sm:text-sm font-extrabold text-slate-900">7. กฎหมายระหว่างประเทศ & องค์การระหว่างประเทศ</span>
-                        <span class="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">International Orgs</span>
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">International Orgs</span>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs text-slate-700">
-                        <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-700">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                             <b class="text-slate-900 font-bold block">⚖️ กฎหมายระหว่างประเทศ (5 แหล่ง):</b>
                             <p class="text-slate-600 text-[11px] leading-relaxed">1. จารีตประเพณี <br> 2. สัญญา/ข้อตกลง <br> 3. คำวินิจฉัยศาล <br> 4. ความเห็นนักกฎหมาย <br> 5. หลักเกณฑ์ทั่วไปของกฎหมาย</p>
                         </div>
 
-                        <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                             <b class="text-slate-900 font-bold block">🌐 องค์การสหประชาชาติ (UN):</b>
                             <p class="text-slate-600 text-[11px] leading-relaxed">• <b>ก่อตั้ง:</b> 24 ต.ค. 1945 <br>
                             • <b>องค์กรหลัก:</b> สมัชชาใหญ่, UNSC (สมาชิกถาวร 5 ชาติ: สหรัฐฯ รัสเซีย อังกฤษ ฝรั่งเศส จีน มีสิทธิ Veto), ECOSOC, คณะมนตรีภาวะทรัสตี, สำนักเลขาธิการ, ศาล ICJ <br>
                             • <b>ข้อจำกัด:</b> สิทธิยับยั้ง Veto, ค่าใช้จ่าย, ขาดอำนาจบังคับเด็ดขาด</p>
                         </div>
 
-                        <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                             <b class="text-slate-900 font-bold block">🇪🇺 EU & 🌏 ASEAN:</b>
                             <p class="text-slate-600 text-[11px] leading-relaxed">• <b>EU:</b> ECSC (1950) &rarr; EC (1967) &rarr; สนธิสัญญามาสตริกต์ (1992) ก่อตั้ง EU, ตลาดเดียว (1993), เงินยูโร (1 ม.ค. 2002)<br>
                             • <b>ASEAN:</b> ปฏิญญากรุงเทพฯ (8 ส.ค. 2510) โดย 5 ประเทศแรก: ไทย, อินโดฯ, มาเลเซีย, ฟิลิปปินส์, สิงคโปร์ (บรูไน 2527, เวียดนาม 2538, ลาว-พม่า 2540, กัมพูชา 2542)</p>
@@ -405,25 +405,25 @@
             </div>
 
             <!-- CHAPTER 5 -->
-            <div id="socChap5" class="space-y-8 pt-6">
-                <div class="border-b border-slate-200 pb-2.5 sm:pb-3 flex items-center justify-between">
-                    <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
+            <div id="socChap5" class="space-y-6 pt-4">
+                <div class="border-b border-slate-200 pb-3 flex items-center justify-between">
+                    <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
                         <i data-lucide="landmark" class="w-4 h-4 text-indigo-600"></i>
                         <span>บทที่ 5: พัฒนาการอารยธรรมตะวันออก (จีน อินเดีย อิสลาม)</span>
                     </h2>
-                    <span class="text-xs font-semibold text-slate-500 hidden sm:inline">ม.6 ปลายภาค</span>
+                    <span class="text-xs font-semibold text-slate-500">ม.6 / A-Level</span>
                 </div>
 
                 <!-- 5.1 Chinese Civilization Detailed -->
-                <div class="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 space-y-4 shadow-2xs">
-                    <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                <div class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-4 shadow-2xs">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                         <span class="text-xs sm:text-sm font-extrabold text-slate-900">1. อารยธรรมจีน (Chinese Civilization)</span>
-                        <span class="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">China</span>
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">China</span>
                     </div>
 
                     <div class="space-y-4 text-xs text-slate-700">
                         <!-- Geo & Prehistoric -->
-                        <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                             <b class="text-slate-900 font-bold block">🏔️ ภูมิศาสตร์ & ยุคก่อนประวัติศาสตร์:</b>
                             <p class="text-slate-600 leading-relaxed">แปซิฟิก (ตะวันออก), ที่ราบสูงทิเบต/พาร์มีร์ (ตะวันตกเฉียงใต้), ทะเลทรายโกบี (ตะวันตกเฉียงเหนือ) เป็นกำแพงธรรมชาติ ทำให้จีนเป็น <b class="text-indigo-900">อารยธรรมบริสุทธิ์</b> ไม่ได้รับอิทธิพลจากภายนอกในยุคแรก <br>
                             • <b>ยุคหินใหม่:</b> วัฒนธรรมหยางเชา (มณฑลเหอนาน: เครื่องปั้นดินเผาสีแดง/ดำ) vs วัฒนธรรมหลงชาน (มณฑลชานตุง: เครื่องปั้นดินเผาสีดำเรียบ)</p>
@@ -479,25 +479,25 @@
                         </div>
 
                         <!-- Opium War, Revolution & Communism -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
-                            <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">🚢 สงครามฝิ่น & กบฏสำคัญ:</b>
                                 <p class="text-slate-600 text-[11px] leading-relaxed">• <b>สงครามฝิ่น (ศตวรรษที่ 19):</b> จีน (ผูกขาดโดยพ่อค้า "กุ้งหอง") ปราบฝิ่นอังกฤษ &rarr; แพ้ ลงนาม <b class="text-indigo-900">สนธิสัญญานานกิง</b> (ยกเกาะฮ่องกง, เปิด 5 เมืองท่า [กวางตุ้ง, เซี่ยเหมิน, ฝูโจว, หนิงปอ, เซี่ยงไฮ้], ยกเลิกระบบกุ้งหอง, สิทธิสภาพนอกอาณาเขต, อังกฤษเช่า New Territories 99 ปี สิ้นสุด 1997)<br>
                                 • <b>กบฏไท่ผิงเทียนกั่ว (1850-1864):</b> หง ซิ่วเฉวียน (อ้างเป็นน้องพระเยซู) ยึดนานกิง ตาย 20-100 ล้านคน<br>
                                 • <b>กบฏนักมวย (1900):</b> ต่อต้านยึดสถานทูตต่างชาติ จีนปรับ 325 ล้านดอลลาร์</p>
                             </div>
 
-                            <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
-                                <b class="text-slate-900 font-bold block">🇨🇳 ปปฏิวัติ 1911 & ระบอบคอมมิวนิสต์:</b>
+                            <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                                <b class="text-slate-900 font-bold block">🇨🇳 ปฏิวัติ 1911 & ระบอบคอมมิวนิสต์:</b>
                                 <p class="text-slate-600 text-[11px] leading-relaxed">• <b>ปฏิวัติ 1911:</b> ดร. ซุน ยัตเซน ตั้งพรรคก๊กมินตั๋ง ชู <b class="text-indigo-900">ลัทธิไตรราษฎร์</b> (ประชาชาติ, สิทธิประชาชน, สวัสดิภาพประชาชน) ล้มชิง; เจียงไคเช็คขึ้นแทน<br>
                                 • <b>คอมมิวนิสต์ (1949):</b> เหมา เจ๋อตง ชนะเจียงไคเช็ค (เจียงหนีไปไต้หวัน)<br>
                                 • <b>Great Leap Forward (1958-1961):</b> ระบบคอมมูนล้มเหลวอดอยาก / <b>ปฏิวัติวัฒนธรรม (1966-1976)</b><br>
-                                • <b>เติ้ง เสี่ยวผิง:</b> ชูนโยบาย <b class="text-indigo-900">สี่ทันสมัย</b> ปปฏิรูปเศรษฐกิจจีน</p>
+                                • <b>เติ้ง เสี่ยวผิง:</b> ชูนโยบาย <b class="text-indigo-900">สี่ทันสมัย</b> ปฏิรูปเศรษฐกิจจีน</p>
                             </div>
                         </div>
 
                         <!-- Philosophy & Literature -->
-                        <div class="p-3 sm:p-3.5 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
+                        <div class="p-3.5 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
                             <b class="text-indigo-900 font-bold block">📜 ปรัชญา วรรณกรรม & วิทยาการจีน:</b>
                             <p class="text-slate-700 text-[11px] leading-relaxed">• <b>ขงจื๊อ:</b> ความสัมพันธ์ 5 ประการ / <b>เต๋า (เล่าจื๊อ):</b> เรียบง่าย กลมกลืนธรรมชาติ / <b>เม่งจื๊อ:</b> มนุษย์ทุกคนเป็นคนดีโดยธรรมชาติแต่ถูก environment ทำลาย / <b>นิตินิยม:</b> กฎหมายเข้มงวด<br>
                             • <b>วรรณกรรม:</b> สื่อจี้ (ซือหม่าเฉียน), สามก๊ก, ซ้องกั๋ง, ไซอิ๋ว, จินผิงเหมย, หงโหลวมิ่ง (ความฝันในหอแดง)<br>
@@ -507,14 +507,14 @@
                 </div>
 
                 <!-- 5.2 Indian Civilization Detailed -->
-                <div class="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 space-y-4 shadow-2xs">
-                    <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                <div class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-4 shadow-2xs">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                         <span class="text-xs sm:text-sm font-extrabold text-slate-900">2. อารยธรรมอินเดีย (Indian Civilization)</span>
-                        <span class="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">India</span>
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">India</span>
                     </div>
 
                     <div class="space-y-4 text-xs text-slate-700">
-                        <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                             <b class="text-slate-900 font-bold block">🏛️ ภูมิศาสตร์ & ลุ่มน้ำสินธุ (3,000 B.C.):</b>
                             <p class="text-slate-600 leading-relaxed">
                                 ได้ชื่อว่า <b class="text-indigo-900">"อนุทวีป"</b> มีหิมาลัย ทะเลทรายธาร์ ภูเขาวินธัย มีช่องเขาตะวันตกเฉียงเหนือคือ <b class="text-indigo-900">ช่องไคเบอร์</b> และ <b class="text-indigo-900">ช่องโบลัน</b> เป็นทางผ่าน <br>
@@ -522,8 +522,8 @@
                             </p>
                         </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
-                            <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">👑 พัฒนาการทางการเมืองตามยุคสมัย:</b>
                                 <p class="text-slate-600 text-[11px] leading-relaxed">• <b>สมัยอารยัน (1,500 B.C.):</b> แต่งคัมภีร์พระเวท ปกครองด้วยสภา & สมิติ &rarr; ราชาธิปไตย (พิธีราชาภิเษก, พิธีอัศวเมธ ปล่อยม้าขยายดินแดน)<br>
                                 • <b>มคธ:</b> เมืองหลวงราชคฤห์ (พระเจ้าพิมพิสาร, พระเจ้าอชาติศัตรู)<br>
@@ -532,7 +532,7 @@
                                 • <b>มุสลิม/โมกุล:</b> สุลต่านเดลี &rarr; โมกุล (อัครา) พระเจ้าอักบาร์มหาราช แบ่งปกครองเป็น ซูบาห์ ซากาห์ ปากานาห์ ยกเลิกภาษีคนต่างศาสนา</p>
                             </div>
 
-                            <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                            <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                                 <b class="text-slate-900 font-bold block">🇮🇳 อังกฤษ & การกู้อิสรภาพ:</b>
                                 <p class="text-slate-600 text-[11px] leading-relaxed">• อังกฤษปราบกบฏซีปอย ยึดเป็นอาณานิคมโดยตรง (1858) มีอุปราชปกครอง แบ่งเป็น British India & รัฐมหาราชา<br>
                                 • <b class="text-indigo-900">มหาตมะ คานธี</b> นำต่อสู้ด้วย <b class="text-indigo-900">"หลักอหิงสา"</b> และ <b class="text-indigo-900">"สัตยาเคราะห์"</b> (ดื้อแพ่ง อดอาหาร ประท้วงภาษีเกลือ)<br>
@@ -540,7 +540,7 @@
                             </div>
                         </div>
 
-                        <div class="p-3 sm:p-3.5 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
+                        <div class="p-3.5 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
                             <b class="text-indigo-900 font-bold block">🕉️ สังคม ศาสนา ศิลปกรรม & วิทยาการอินเดีย:</b>
                             <p class="text-slate-700 text-[11px] leading-relaxed">• <b>วรรณะ:</b> พราหมณ์, กษัตริย์, แพศย์, ศูทร, จัณฑาล (หริชน)<br>
                             • <b>ศาสนา:</b> ฮินดู (ตรีมูรติ, อุปนิษัท), พุทธ (อเทวนิยม ปฏิเสธพระเวท & วรรณะ), ซิกข์ (คุรุนานัก รวมฮินดู+อิสลาม คัมภีร์อาทิครันถ์ ต่อมาคุรุโควินท์ สิงห์ เป็นชุมชนนักรบ ใช้นามสกุล "สิงห์" ผมยาว โพกหัว สวมกำไลเหล็กกะทะ)<br>
@@ -551,27 +551,27 @@
                 </div>
 
                 <!-- 5.3 Islamic Civilization Detailed -->
-                <div class="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 space-y-4 shadow-2xs">
-                    <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+                <div class="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-4 shadow-2xs">
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                         <span class="text-xs sm:text-sm font-extrabold text-slate-900">3. อารยธรรมอิสลาม (Islamic Civilization)</span>
-                        <span class="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">Middle East</span>
+                        <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-50 text-indigo-800 border border-indigo-200">Middle East</span>
                     </div>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-xs text-slate-700">
-                        <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-700">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                             <b class="text-slate-900 font-bold block">🕌 กำเนิด & การปกครอง:</b>
                             <p class="text-slate-600 text-[11px] leading-relaxed">• คำว่า "อาหรับ" แปลว่า ทะเลทราย สืบเชื้อสายจาก "เชม" บุตรโนอาห์ (เซมิติค) แบ่งเป็นพวกตั้งถิ่นฐาน กับพวกเร่ร่อน (เบดูอิน)<br>
                             • เบดูอินเลือกหัวหน้าเรียกว่า เช็ค (Sheikh)<br>
                             • ยุคจักรวรรดิอาหรับปกครองโดย เเคาะลีฟะห์ (กาหลิบ) ศูนย์กลาง: มักกะฮ์ &rarr; ดามัสกัส (อุมัยยะฮ์) &rarr; แบกแดด (อับบาสียะฮ์) ถูกมองโกลตีแตก ค.ศ. 1258 และแทนที่ด้วยจักรวรรดิออตโตมัน</p>
                         </div>
 
-                        <div class="p-3 sm:p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl space-y-1">
                             <b class="text-slate-900 font-bold block">📖 โครงสร้างทางศาสนา:</b>
                             <p class="text-slate-600 text-[11px] leading-relaxed">• <b>หลักศรัทธา 6 ประการ</b><br>
                             • <b>หลักปฏิบัติ 5 ประการ:</b> การปฏิญาณตน (กะลีมะฮ์), ทำนมาซ, บริจาคทาน (ซะกาต), ถือศีลอดเดือนเราะมะฎอน, ประกอบพิธีฮัจญ์</p>
                         </div>
 
-                        <div class="p-3 sm:p-3.5 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
+                        <div class="p-3.5 bg-indigo-50/70 border border-indigo-200/80 rounded-xl space-y-1">
                             <b class="text-indigo-900 font-bold block">🕌 ศิลปวัฒนธรรม & วรรณกรรม:</b>
                             <p class="text-slate-700 text-[11px] leading-relaxed">• <b>สถาปัตยกรรม:</b> หลังคาโดม (round dome), หอคอยยอดแหลม (มินาเรต), ประตูโค้ง, ลายโมเสก, ลายเครือเถา, ตัวอักษรอาหรับ (ไม่นิยมรูปเคารพสิ่งมีชีวิต)<br>
                             • <b>วรรณกรรมสำคัญ:</b> คัมภีร์อัลกุรอาน และ <b class="text-indigo-900">นิทานอาหรับราตรี (1001 Nights)</b></p>
@@ -584,79 +584,88 @@
         </div>
 
         <!-- VIEW MODE 2: FLASHCARDS -->
-        <div id="socialCardsView" class="hidden max-w-xl mx-auto text-center space-y-6">
-            <div class="space-y-1">
-                <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Active Recall</span>
-                <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">การ์ดช่วยจำสังคมศึกษา ม.6 (วศม6)</h2>
-                <p class="text-slate-500 text-xs">แตะที่การ์ดเพื่อพลิกดูเฉลยสาระสำคัญ</p>
-            </div>
+        <div id="socialCardsView" class="view-content hidden">
+            <div class="max-w-xl mx-auto text-center space-y-6">
+                <div class="space-y-1">
+                    <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">Active Recall</span>
+                    <h2 class="text-2xl font-extrabold text-slate-900">การ์ดช่วยจำคีย์เวิร์ดสังคมศึกษา</h2>
+                    <p class="text-slate-500 text-xs">คลิกที่การ์ดเพื่อพลิกดูเฉลยสาระสำคัญ</p>
+                </div>
 
-            <div class="flex items-center justify-between text-xs text-slate-500 px-1">
-                <span id="socCardCounter" class="font-bold text-slate-900">1 / 10</span>
-            </div>
+                <!-- Flashcard Counter & Filter -->
+                <div class="flex items-center justify-between text-xs text-slate-500 px-1">
+                    <span id="socCardCounter" class="font-bold text-slate-900">1 / 10</span>
+                    <select id="socCardCategory" onchange="filterSocialCardsCategory(this.value)" class="bg-white border border-slate-200 text-slate-700 text-xs rounded-xl px-3 py-1.5 focus:outline-none focus:border-indigo-500">
+                        <option value="all">ทุกบทเรียน</option>
+                        <option value="4">บทที่ 4: ความขัดแย้ง & ความร่วมมือ</option>
+                        <option value="5">บทที่ 5: อารยธรรมตะวันออก</option>
+                    </select>
+                </div>
 
-            <!-- Flip Card Container (Mobile Touch-Optimized) -->
-            <div class="perspective-1000 min-h-[280px] sm:min-h-[300px]">
-                <div id="socFlashcard" onclick="flipSocialCard()" class="card-inner cursor-pointer relative w-full min-h-[280px] sm:min-h-[300px] rounded-2xl border border-slate-200 bg-white p-5 sm:p-8 shadow-xs hover:border-slate-300 transition-all duration-300 select-none flex flex-col justify-between touch-manipulation">
-                    <div class="card-front flex flex-col justify-between h-full min-h-[240px]">
-                        <div class="flex justify-between items-start">
-                            <span id="socTag" class="px-2.5 py-1 rounded-lg text-[10px] sm:text-[11px] font-bold bg-indigo-50 text-indigo-800 border border-indigo-200">
-                                บทที่ 4
-                            </span>
-                            <span class="text-slate-400 text-xs font-medium flex items-center gap-1">
-                                <i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i> แตะเพื่อพลิก
-                            </span>
+                <!-- The Flip Card Container -->
+                <div class="perspective-1000 min-h-[300px]">
+                    <div id="socFlashcard" onclick="flipSocialCard()" class="card-inner cursor-pointer relative w-full min-h-[300px] rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs hover:border-slate-300 transition-all duration-300 select-none flex flex-col justify-between">
+                        <!-- Front Face -->
+                        <div class="card-front flex flex-col justify-between h-full min-h-[260px]">
+                            <div class="flex justify-between items-start">
+                                <span id="socTag" class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-indigo-50 text-indigo-800 border border-indigo-200">
+                                    ศาลยุติธรรมระหว่างประเทศ
+                                </span>
+                                <span class="text-[10px] font-medium text-slate-400 flex items-center gap-1">
+                                    <i data-lucide="rotate-cw" class="w-3 h-3"></i> คลิกเพื่อพลิก
+                                </span>
+                            </div>
+                            <div class="my-6">
+                                <h3 id="socQuestion" class="text-base sm:text-lg font-bold text-slate-900 leading-snug">
+                                    ศาลยุติธรรมระหว่างประเทศ (ICJ) มีจำนวนผู้พิพากษาและวาระการดำรงตำแหน่งกี่ปี?
+                                </h3>
+                            </div>
+                            <div class="text-[11px] text-slate-400 font-medium">
+                                STUDY PASS • FLASHCARDS
+                            </div>
                         </div>
-                        <div class="my-auto py-3 sm:py-4">
-                            <h3 id="socQuestion" class="text-base sm:text-xl font-extrabold text-slate-900 leading-relaxed">
-                                ข้อใดคือความแตกต่างระหว่าง "รีทอร์ชัน (Retortion)" กับ "รีไพรซอล (Reprisal)"?
-                            </h3>
-                        </div>
-                        <div class="text-[11px] text-slate-400">
-                            💡 Tip: ลองนึกคำตอบในใจก่อนแตะดูเฉลย
-                        </div>
-                    </div>
-                    
-                    <div class="card-back absolute inset-0 rounded-2xl bg-slate-900 text-white p-5 sm:p-8 shadow-md flex flex-col justify-between text-left h-full min-h-[240px]">
-                        <div class="flex justify-between items-start">
-                            <span class="px-2.5 py-1 rounded-lg text-[10px] sm:text-[11px] font-bold bg-indigo-500 text-slate-950">
-                                เฉลย & สรุปสาระสำคัญ
-                            </span>
-                            <span class="text-slate-400 text-xs font-medium">
-                                <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-indigo-400 inline"></i>
-                            </span>
-                        </div>
-                        <div class="my-auto py-2.5 sm:py-3 space-y-2">
-                            <p id="socAnswer" class="text-xs sm:text-sm text-slate-100 leading-relaxed font-medium">
-                                รีทอร์ชัน = การตอบโต้ที่ถูกกฎหมายระหว่างประเทศ (เช่น ตัดสัมพันธ์ทางการทูต)<br>
-                                รีไพรซอล = การตอบโต้ที่ขัดกฎหมายเพื่อให้อีกฝ่ายยอมตกลง (เช่น บอยคอตสินค้า)
-                            </p>
-                        </div>
-                        <div class="text-[11px] text-slate-400 border-t border-slate-800 pt-2">
-                            แตะอีกครั้งเพื่อกลับไปที่คำถาม
+
+                        <!-- Back Face -->
+                        <div class="card-back flex flex-col justify-between h-full min-h-[260px]">
+                            <div class="flex justify-between items-start">
+                                <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-slate-100 text-slate-700">
+                                    คำตอบ
+                                </span>
+                                <span class="text-[10px] font-medium text-slate-400 flex items-center gap-1">
+                                    <i data-lucide="rotate-cw" class="w-3 h-3"></i> คลิกเพื่อพลิกกลับ
+                                </span>
+                            </div>
+                            <div class="my-6">
+                                <p id="socAnswer" class="text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed">
+                                    มีผู้พิพากษา 15 คน และดำรงตำแหน่งวาระละ 9 ปี (แต่งตั้งโดยคณะมนตรีความมั่นคง & สมัชชาใหญ่ UN)
+                                </p>
+                            </div>
+                            <div class="text-[11px] text-indigo-600 font-bold">
+                                ✓ ทบทวนสำเร็จ
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Navigation Buttons -->
-            <div class="flex items-center justify-center gap-3 pt-2">
-                <button onclick="prevSocialCard()" class="px-5 py-2.5 rounded-xl bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 font-bold text-xs flex items-center gap-1.5 shadow-2xs active:scale-95">
-                    <i data-lucide="chevron-left" class="w-4 h-4"></i> ก่อนหน้า
-                </button>
-                <button onclick="nextSocialCard()" class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center gap-1.5 shadow-2xs active:scale-95">
-                    ถัดไป <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                </button>
+                <!-- Navigation Buttons -->
+                <div class="flex items-center justify-center gap-3 pt-2">
+                    <button onclick="prevSocialCard()" class="px-5 py-2.5 rounded-xl bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 font-bold text-xs flex items-center gap-1.5 shadow-2xs active:scale-95">
+                        <i data-lucide="chevron-left" class="w-4 h-4"></i> ก่อนหน้า
+                    </button>
+                    <button onclick="nextSocialCard()" class="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center gap-1.5 shadow-2xs active:scale-95">
+                        ถัดไป <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
             </div>
         </div>
 
         <!-- Bottom Page Navigation -->
         <section class="pt-8 border-t border-slate-200 mt-12 sm:mt-16 flex items-center justify-between gap-4 text-xs font-bold">
-            <a href="math.html" class="px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-1.5">
+            <a href="math.html" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-1.5">
                 <i data-lucide="arrow-left" class="w-4 h-4"></i>
-                <span>คณิตศาสตร์</span>
+                <span>ย้อนกลับ: คณิตศาสตร์</span>
             </a>
-            <a href="index.html" class="px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white transition-all flex items-center gap-1.5">
+            <a href="index.html" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white transition-all flex items-center gap-1.5">
                 <span>กลับสู่หน้าหลัก</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
@@ -664,7 +673,7 @@
 
     </main>
 
-    <!-- Mobile Fixed Bottom Navigation Bar -->
+    <!-- Mobile Bottom Navigation Bar -->
     <nav class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2 px-4 shadow-lg flex items-center justify-around">
         <button onclick="toggleSocialView('notes')" id="mBtnSocNotes" class="flex flex-col items-center gap-1 text-[11px] font-bold text-indigo-700">
             <i data-lucide="book-open" class="w-5 h-5"></i>
@@ -693,26 +702,38 @@
     <!-- Social Page Script -->
     <script>
         const SOC_CARDS = [
-            { tag: "บทที่ 4: สันติวิธีทางกฎหมาย", q: "ศาลยุติธรรมระหว่างประเทศ (ICJ) มีจำนวนผู้พิพากษาและวาระการดำรงตำแหน่งกี่ปี?", a: "มีผู้พิพากษา 15 คน และดำรงตำแหน่งวาระละ 9 ปี (แต่งตั้งโดยคณะมนตรีความมั่นคง & สมัชชาใหญ่ UN)" },
-            { tag: "บทที่ 4: การบีบบังคับ", q: "รีทอร์ชัน (Retortion) กับ รีไพรซอล (Reprisal) ต่างกันอย่างไรในแง่กฎหมาย?", a: "รีทอร์ชัน = ตอบโต้แบบถูกต้องตามกฎหมาย (เช่น ตัดความสัมพันธ์ทางการทูต, ยกเลิกสิทธิพิเศษภาษี)\nรีไพรซอล = ตอบโต้แบบขัดกฎหมายเพื่อให้อีกฝ่ายยอมตกลง (เช่น บอยคอตสินค้า, เอมบาร์โก Embargo, ปิดล้อมทางทะเล)" },
-            { tag: "บทที่ 4: สงครามโลกครั้งที่ 1", q: "ชนวนเหตุและผลลัพธ์สำคัญของสงครามโลกครั้งที่ 1 มีอะไรบ้าง?", a: "ชนวนเหตุ: การลอบปลงพระชนม์ อาร์ชดยุค ฟรานซิส เฟอร์ดินานด์ มกุฎราชกุมารออสเตรีย-ฮังการี\nผลลัพธ์: คำแถลง 14 ประการของวูดโรว์ วิลสัน ก่อตั้งสนธิสัญญาแวร์ซาย และ องค์การสันนิบาตชาติ" },
-            { tag: "บทที่ 4: สงครามเย็น", q: "เส้นขนานที่แบ่งประเทศในสงครามเกาหลีและสงครามเวียดนามคือเส้นใด?", a: "สงครามเกาหลี (1950-1953) = เส้นขนานที่ 38 องศาเหนือ\nสงครามเวียดนาม (1965-1975) = เส้นขนานที่ 17 องศาเหนือ" },
-            { tag: "บทที่ 4: สงครามเย็น", q: "มิคาอิล กอร์บาชอฟ ชูนโยบาย 2 ประการใดที่นำไปสู่การสิ้นสุดสงครามเย็น?", a: "เปเรสตรอยกา (Perestroika - ปฏิรูปประเทศ) และ กลาสนอสต์ (Glasnost - เปิดกว้างทางการเมือง)" },
-            { tag: "บทที่ 4: ตะวันออกกลาง", q: "ข้อตกลงวอชิงตัน (ค.ศ. 1993) มีสาระสำคัญอย่างไรต่อปัญหาปาเลสไตน์?", a: "อิสราเอลยอมให้ PLO (องค์การปลดปล่อยปาเลสไตน์) ปกครองตนเองในฉนวนกาซาและเมืองเจริโค" },
-            { tag: "บทที่ 5: อารยธรรมจีน", q: "ทฤษฎีการปกครองในสมัยราชวงศ์โจวที่อ้างความชอบธรรมในการขึ้นสู่อำนาจของฮ่องเต้เรียกว่าอะไร?", a: "อาณัติแห่งสวรรค์ (Mandate of Heaven / เทียนมิ่ง)" },
-            { tag: "บทที่ 5: อารยธรรมจีน", q: "สนธิสัญญานานกิงหลังสงครามฝิ่นส่งผลกระทบสำคัญต่อจีนอย่างไรบ้าง?", a: "ยกเกาะฮ่องกงให้อังกฤษ, เปิด 5 เมืองท่า (กวางตุ้ง, เซี่ยเหมิน, ฝูโจว, หนิงปอ, เซี่ยงไฮ้), ยกเลิกระบบผูกขาดกุ้งหอง, และให้สิทธิสภาพนอกอาณาเขตแก่อังกฤษ" },
-            { tag: "บทที่ 5: อารยธรรมอินเดีย", q: "มหาตมะ คานธี นำหลักการใดมาใช้ในการเรียกร้องเอกราชอินเดียจากอังกฤษ?", a: "หลักอหิงสา (ไม่ใช้ความรุนแรง) และ สัตยาเคราะห์ (ยึดมั่นในความจริง เช่น การดื้อแพ่ง อดอาหาร ประท้วงภาษีเกลือ)" },
-            { tag: "บทที่ 5: อารยธรรมอินเดีย", q: "วรรณะใดในอินเดียที่เป็นพวกนอกวรรณะ และคานธีเรียกคนกลุ่มนี้ว่าอะไร?", a: "จัณฑาล (นอกวรรณะ) ซึ่งคานธีเรียกว่า 'หริชน' (แปลว่า บุตรของพระเจ้า)" }
+            { category: 4, tag: "บทที่ 4: สันติวิธีทางกฎหมาย", q: "ศาลยุติธรรมระหว่างประเทศ (ICJ) มีจำนวนผู้พิพากษาและวาระการดำรงตำแหน่งกี่ปี?", a: "มีผู้พิพากษา 15 คน และดำรงตำแหน่งวาระละ 9 ปี (แต่งตั้งโดยคณะมนตรีความมั่นคง & สมัชชาใหญ่ UN)" },
+            { category: 4, tag: "บทที่ 4: การบีบบังคับ", q: "รีทอร์ชัน (Retortion) กับ รีไพรซอล (Reprisal) ต่างกันอย่างไรในแง่กฎหมาย?", a: "รีทอร์ชัน = ตอบโต้แบบถูกต้องตามกฎหมาย (เช่น ตัดความสัมพันธ์ทางการทูต, ยกเลิกสิทธิพิเศษภาษี)\nรีไพรซอล = ตอบโต้แบบขัดกฎหมายเพื่อให้อีกฝ่ายยอมตกลง (เช่น บอยคอตสินค้า, เอมบาร์โก Embargo, ปิดล้อมทางทะเล)" },
+            { category: 4, tag: "บทที่ 4: สงครามโลกครั้งที่ 1", q: "ชนวนเหตุและผลลัพธ์สำคัญของสงครามโลกครั้งที่ 1 มีอะไรบ้าง?", a: "ชนวนเหตุ: การลอบปลงพระชนม์ อาร์ชดยุค ฟรานซิส เฟอร์ดินานด์ มกุฎราชกุมารออสเตรีย-ฮังการี\nผลลัพธ์: คำแถลง 14 ประการของวูดโรว์ วิลสัน ก่อตั้งสนธิสัญญาแวร์ซาย และ องค์การสันนิบาตชาติ" },
+            { category: 4, tag: "บทที่ 4: สงครามเย็น", q: "เส้นขนานที่แบ่งประเทศในสงครามเกาหลีและสงครามเวียดนามคือเส้นใด?", a: "สงครามเกาหลี (1950-1953) = เส้นขนานที่ 38 องศาเหนือ\nสงครามเวียดนาม (1965-1975) = เส้นขนานที่ 17 องศาเหนือ" },
+            { category: 4, tag: "บทที่ 4: สงครามเย็น", q: "มิคาอิล กอร์บาชอฟ ชูนโยบาย 2 ประการใดที่นำไปสู่การสิ้นสุดสงครามเย็น?", a: "เปเรสตรอยกา (Perestroika - ปฏิรูปประเทศ) และ กลาสนอสต์ (Glasnost - เปิดกว้างทางการเมือง)" },
+            { category: 4, tag: "บทที่ 4: ตะวันออกกลาง", q: "ข้อตกลงวอชิงตัน (ค.ศ. 1993) มีสาระสำคัญอย่างไรต่อปัญหาปาเลสไตน์?", a: "อิสราเอลยอมให้ PLO (องค์การปลดปล่อยปาเลสไตน์) ปกครองตนเองในฉนวนกาซาและเมืองเจริโค" },
+            { category: 5, tag: "บทที่ 5: อารยธรรมจีน", q: "ทฤษฎีการปกครองในสมัยราชวงศ์โจวที่อ้างความชอบธรรมในการขึ้นสู่อำนาจของฮ่องเต้เรียกว่าอะไร?", a: "อาณัติแห่งสวรรค์ (Mandate of Heaven / เทียนมิ่ง)" },
+            { category: 5, tag: "บทที่ 5: อารยธรรมจีน", q: "สนธิสัญญานานกิงหลังสงครามฝิ่นส่งผลกระทบสำคัญต่อจีนอย่างไรบ้าง?", a: "ยกเกาะฮ่องกงให้อังกฤษ, เปิด 5 เมืองท่า (กวางตุ้ง, เซี่ยเหมิน, ฝูโจว, หนิงปอ, เซี่ยงไฮ้), ยกเลิกระบบผูกขาดกุ้งหอง, และให้สิทธิสภาพนอกอาณาเขตแก่อังกฤษ" },
+            { category: 5, tag: "บทที่ 5: อารยธรรมอินเดีย", q: "มหาตมะ คานธี นำหลักการใดมาใช้ในการเรียกร้องเอกราชอินเดียจากอังกฤษ?", a: "หลักอหิงสา (ไม่ใช้ความรุนแรง) และ สัตยาเคราะห์ (ยึดมั่นในความจริง เช่น การดื้อแพ่ง อดอาหาร ประท้วงภาษีเกลือ)" },
+            { category: 5, tag: "บทที่ 5: อารยธรรมอินเดีย", q: "วรรณะใดในอินเดียที่เป็นพวกนอกวรรณะ และคานธีเรียกคนกลุ่มนี้ว่าอะไร?", a: "จัณฑาล (นอกวรรณะ) ซึ่งคานธีเรียกว่า 'หริชน' (แปลว่า บุตรของพระเจ้า)" }
         ];
 
         let socActiveIndex = 0;
+        let filteredSocCards = SOC_CARDS;
+
+        function filterSocialCardsCategory(cat) {
+            if (cat === 'all') {
+                filteredSocCards = SOC_CARDS;
+            } else {
+                filteredSocCards = SOC_CARDS.filter(c => c.category == cat);
+            }
+            socActiveIndex = 0;
+            updateSocialCardUI();
+        }
 
         function updateSocialCardUI() {
-            const fc = SOC_CARDS[socActiveIndex];
+            if (filteredSocCards.length === 0) return;
+            const fc = filteredSocCards[socActiveIndex];
             document.getElementById("socTag").textContent = fc.tag;
             document.getElementById("socQuestion").textContent = fc.q;
             document.getElementById("socAnswer").innerHTML = fc.a.replace(/\n/g, '<br>');
-            document.getElementById("socCardCounter").textContent = `${socActiveIndex + 1} / ${SOC_CARDS.length}`;
+            document.getElementById("socCardCounter").textContent = `${socActiveIndex + 1} / ${filteredSocCards.length}`;
             document.getElementById("socFlashcard").classList.remove("flipped");
         }
 
@@ -721,12 +742,14 @@
         }
 
         function nextSocialCard() {
-            socActiveIndex = (socActiveIndex + 1) % SOC_CARDS.length;
+            if (filteredSocCards.length === 0) return;
+            socActiveIndex = (socActiveIndex + 1) % filteredSocCards.length;
             updateSocialCardUI();
         }
 
         function prevSocialCard() {
-            socActiveIndex = (socActiveIndex - 1 + SOC_CARDS.length) % SOC_CARDS.length;
+            if (filteredSocCards.length === 0) return;
+            socActiveIndex = (socActiveIndex - 1 + filteredSocCards.length) % filteredSocCards.length;
             updateSocialCardUI();
         }
 
